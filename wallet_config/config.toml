@@ -1,0 +1,19 @@
+[wallets]  
+# Cold purses 
+ledger_path = "usb://ledger"  
+trezor_path = "udp://trezor"  
+coldcard_derivation = "m/44'/60'/0'/0"  
+
+# Desktop/mobile wallets  
+metamask_rpc = "http://localhost:8545"  
+trustwallet_chain = "ETH"  
+phantom_uri = "solana:mainnet"  
+
+# Institutional solutions  
+fireblocks_api_key = "${FIREBLOCKS_KEY}"  
+gnosis_safe_address = "0x..."  
+
+[signer]  
+# Choice of provider: ledger/trezor/metamask/trust/fireblocks/gnosis  
+default_signer = "fireblocks"  
+multi_vault = true  # Allow wallet rotation
