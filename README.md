@@ -1,5 +1,5 @@
 # Quantum Horizon: Institutional Cross-Chain DeFi Bot for RWA Arbitrage & Private Derivatives
-Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders combining tokenized asset arbitrage (RWA), private derivatives via zk-SNARKs (Aztec) and MEV protection (EigenLayer, Flashbots). For capitals $500k+ with KYC (Polygon ID), OpenZeppelin auditing and Fireblocks integration.
+Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders combining tokenized asset arbitrage (RWA), private derivatives via zk-SNARKs (Aztec) and MEV protection (EigenLayer, Flashbots). For capitals $100k+ with KYC (Polygon ID), OpenZeppelin auditing and Fireblocks integration.
 
 # Key Features
 - ✅ RWA Arbitrage Engine
