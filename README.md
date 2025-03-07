@@ -19,7 +19,9 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 - For Whales Only: Optimization for trades from $100k with protection against liquidity attacks.
 - Institutional-Grade: Halborn-audit, whitelabel solutions for foundations.
 
-# Download
+# Download: For individual access, write to telegram to get it:
+
+https://t.me/ZeronodeX
 
 # Technical Edge
 
