@@ -1,0 +1,18 @@
+[chains]
+eth_rpc = "https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}"
+cosmos_rpc = "https://rpc-cosmos.keplr.app:443"
+arbitrum_rpc = "wss://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}"
+
+[security]
+multisig_threshold = 3
+fireblocks_api_key = "${ENV_FIREBLOCKS_KEY}"
+audit_mode = "OpenZeppelin"
+
+[risk_management]
+max_rwa_exposure = 0.25  # 25%
+auto_hedge_enabled = true
+nexus_min_cover = 1000000  # $1M
+
+[mev]
+flashbots_relay = "https://relay.flashbots.net"
+eigenlayer_attestation = true
