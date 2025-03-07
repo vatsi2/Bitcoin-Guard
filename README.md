@@ -3,14 +3,22 @@ Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders c
 
 # Key Features
 - ✅ RWA Arbitrage Engine
+
 Arbitrage of tokenized bonds (Ondo), real estate (RealT) between Ethereum, Cosmos, Arbitrum via Axelar.
 - ✅ MEV-Proof Execution
+
 Batch transactions with EigenLayer attestation + Flashbots Protect.
+
 - ✅ Private Derivatives
+
 Confidential options/swaps via Aztec zk-SNARKs.
+
 - ✅ Institutional Security
+
 MPC wallets (Fireblocks), multisig (Gnosis Safe), Nexus Mutual insurance.
+
 - ✅ Regulatory Compliance
+
 Auto-reports for MiCA/SEC, KYC via Polygon ID.
 
 # Why Choose Quantum Horizon?
