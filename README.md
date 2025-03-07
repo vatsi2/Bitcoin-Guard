@@ -22,10 +22,10 @@ MPC wallets (Fireblocks), multisig (Gnosis Safe), Nexus Mutual insurance.
 Auto-reports for MiCA/SEC, KYC via Polygon ID.
 
 # Why Choose Quantum Horizon?
-- 100% Cross-Chain Focus: Axelar, LayerZero, Wormhole - arbitrate between 8+ networks.
-- No AI, No Risks: Transparent Rust strategies, manual control via React dashboard.
-- For Whales Only: Optimization for trades from $100k with protection against liquidity attacks.
-- Institutional-Grade: Halborn-audit, whitelabel solutions for foundations.
+- **100% Cross-Chain Focus**: Axelar, LayerZero, Wormhole - arbitrate between 8+ networks.
+- **No AI, No Risks**: Transparent Rust strategies, manual control via React dashboard.
+- **For Whales Only**: Optimization for trades from $100k with protection against liquidity attacks.
+- **Institutional-Grade**: Halborn-audit, whitelabel solutions for foundations.
 
 ## Download: For individual access, write to telegram to get it:
 
