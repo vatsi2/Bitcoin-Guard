@@ -7,3 +7,12 @@ async fn execute_rwa_arbitrage(asset: RwaAsset, chains: [Chain; 2]) -> Result<Tr
         Err(ArbitrageError::NoOpportunity)
     }
 }
+async fn execute_arbitrage(asset: RwaAsset) -> Result<()> {
+    let eth_price = get_price(asset, Chain::Ethereum).await?;
+    let cosmos_price = get_price(asset, Chain::Cosmos).await?;
+    if eth_price > cosmos_price * 1.05 { // Порог 5%
+        bridge_asset(asset, Cosmos => Ethereum).await?;
+        sell_on_dex(asset, Ethereum).await?;
+    }
+    Ok(())
+}
