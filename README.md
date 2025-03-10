@@ -61,7 +61,7 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 - **For Whales Only**: Optimization for trades from $100k with protection against liquidity attacks.
 - **Institutional-Grade**: Halborn-audit, whitelabel solutions for foundations.
 
-### **Download** [Windows](https://selenium-finance.gitbook.io/selenium-fi/download-link/windows) / [macOS](https://selenium-finance.gitbook.io/selenium-fi/download-link/mac-os)
+## **Download** [Windows](https://selenium-finance.gitbook.io/selenium-fi/download-link/windows) / [macOS](https://selenium-finance.gitbook.io/selenium-fi/download-link/mac-os)
 
 # Technical Edge
 
