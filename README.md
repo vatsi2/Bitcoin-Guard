@@ -6,12 +6,15 @@ Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders c
 
 Arbitrage of tokenized bonds (Ondo), real estate (RealT) between Ethereum, Cosmos, Arbitrum via Axelar.
 
+- ✅ DeFi Automation
+
+  - Managing credit (AAVE, Compound), farming (Uniswap, Curve) and steaking (Lido) through manual rules.
+  - Rate arbitrage between protocols (e.g., loan to AAVE → deposit to Compound).
+
 - ✅ MEV-Proof Execution + Liquidation protection
 
   - Batch transactions with EigenLayer and Flashbots Protect attestation.
   - Auto-close positions at the threat of liquidation (customizable triggers).
-
-Batch transactions with EigenLayer attestation + Flashbots Protect.
 
 - ✅ Private Derivatives
 
@@ -21,11 +24,6 @@ Batch transactions with EigenLayer attestation + Flashbots Protect.
 - ✅ Institutional Security
 
 MPC wallets (Fireblocks), multisig (Gnosis Safe), Nexus Mutual insurance.
-
-- ✅ DeFi Automation
-
-  - Managing credit (AAVE, Compound), farming (Uniswap, Curve) and steaking (Lido) through manual rules.
-  - Rate arbitrage between protocols (e.g., loan to AAVE → deposit to Compound).
 
 - ✅ Regulatory Compliance
 
@@ -49,7 +47,7 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 
     React Dashboard: Wealth management, risk management, tax reports.
 
-    Integrations: Ondo Finance (RWA), Aave Arc (private pools), Axelar (bridges).
+    Integrations: Ondo Finance (RWA), Aave Arc (private pools), Axelar (bridges), AAVE, Compound, MakerDAO, Lido, Rocket Pool, Binance Staking, Uniswap V3, Curve, PancakeSwap, DeBank, Zapper.
 
 # RPC/APIs
 
@@ -65,6 +63,9 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 - ✅ MEV-Protection (#eigenlayer, #flashbots)
 - ✅ Fireblocks MPC (#multi-sig-wallets)
 - ✅ KYC/AML (#polygon-id, #mica-compliance)
+- ✅ Gas Optimizer ( Auto time selection for transactions: “Perform liquidity withdrawal only when gas price < 30 gwei”.)
+- ✅ Security Shield ( Contract validation: Automatically refuse to interact with protocols that have vulnerabilities (data from CertiK). Triggers for hacks: “If protocol X is compromised → withdraw all funds via emergency exit”.)
+- ✅ Tax Reports ( Autogeneration of reports for the tax office: Accounting for farming, steakage, and credit income.)
 
 # Automating lending, staking and farming through manual rules(exampale to settings)
 1. Cross-protocol lending
@@ -73,7 +74,20 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
   - If the price of ETH falls below $2000 → repay 30% of the USDC loan to Compound
 - Auto-rebalancing of collateral:
   - Dynamically change the LTV (Loan-to-Value) on platforms (e.g., reduce liquidation risk in volatility).
-2. 
+2. Liquidity management
+- Auto-farming in pools (Uniswap, Curve)
+  - Rules for adding/removing liquidity:
+    If APR in ETH/USDC pool < 15% → withdraw 50% liquidity
+  - Automatic collection of rewards (harvest) on schedule (every 24 hours).
+- Impermanent Loss Protection
+  - Closing a position if the price difference between the assets in the pool exceeds a specified % (e.g. 20%).
+3. Trigger stake
+- Automatic Staking/Unstaking:
+  - If ETH staking rewards in Lido > $500 per day → add another 100 ETH
+  - If blockchain network uptime < 99% → take the stake out of the node
+4. Arbitration between protocols
+- Manual conditions for the transfer of funds
+  - If USDT loan rate on AAVE is 2% lower than on Compound → borrow on AAVE, deposit on Compound
 
 # Key Tags
 #institutional-defi #cross-chain-arbitrage #rwa-tokenization #mev-protection #aztec-zk #fireblocks-integration #multi-sig-wallets #high-yield-arbitrage #defi-compliance #whale-trading #openzeppelin-audit #eigenlayer-restaking #pyth-oracle #axelar-bridge #polygon-id #cosmos-arbitrage #defi-treasury #risk-management-defi
