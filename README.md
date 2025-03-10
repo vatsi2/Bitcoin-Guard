@@ -5,17 +5,27 @@ Quantum Horizon Bot is an autonomous cross-chain bot for institutional traders c
 - ✅ RWA Arbitrage Engine
 
 Arbitrage of tokenized bonds (Ondo), real estate (RealT) between Ethereum, Cosmos, Arbitrum via Axelar.
-- ✅ MEV-Proof Execution
+
+- ✅ MEV-Proof Execution + Liquidation protection
+
+  - Batch transactions with EigenLayer and Flashbots Protect attestation.
+  - Auto-close positions at the threat of liquidation (customizable triggers).
 
 Batch transactions with EigenLayer attestation + Flashbots Protect.
 
 - ✅ Private Derivatives
 
-Confidential options/swaps via Aztec zk-SNARKs.
+  - Confidential options/swaps via Aztec zk-SNARKs.
+  - Access to Aave Arc private pools.
 
 - ✅ Institutional Security
 
 MPC wallets (Fireblocks), multisig (Gnosis Safe), Nexus Mutual insurance.
+
+- ✅ DeFi Automation
+
+  - Managing credit (AAVE, Compound), farming (Uniswap, Curve) and steaking (Lido) through manual rules.
+  - Rate arbitrage between protocols (e.g., loan to AAVE → deposit to Compound).
 
 - ✅ Regulatory Compliance
 
@@ -55,6 +65,15 @@ Auto-reports for MiCA/SEC, KYC via Polygon ID.
 - ✅ MEV-Protection (#eigenlayer, #flashbots)
 - ✅ Fireblocks MPC (#multi-sig-wallets)
 - ✅ KYC/AML (#polygon-id, #mica-compliance)
+
+# Automating lending, staking and farming through manual rules(exampale to settings)
+1. Cross-protocol lending
+- Rules for loans/deposits:
+  - If APY on AAVE for USDC > 8% → deposit 100k USDC
+  - If the price of ETH falls below $2000 → repay 30% of the USDC loan to Compound
+- Auto-rebalancing of collateral:
+  - Dynamically change the LTV (Loan-to-Value) on platforms (e.g., reduce liquidation risk in volatility).
+2. 
 
 # Key Tags
 #institutional-defi #cross-chain-arbitrage #rwa-tokenization #mev-protection #aztec-zk #fireblocks-integration #multi-sig-wallets #high-yield-arbitrage #defi-compliance #whale-trading #openzeppelin-audit #eigenlayer-restaking #pyth-oracle #axelar-bridge #polygon-id #cosmos-arbitrage #defi-treasury #risk-management-defi
