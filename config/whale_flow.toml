@@ -1,0 +1,11 @@
+[wallet]
+mnemonic = "{{ENV_WALLET_SEED}}" # Ledger/Trezor HD path
+hsm_url = "nitro-enclave://127.0.0.1:8123"
+
+[risk_management]
+max_drawdown = 0.15 # 15% max loss per strategy
+volatility_threshold = 0.45 # 45% annualized
+
+[protocols.aave_v3]
+contract_address = "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+health_factor_alert = 1.3
