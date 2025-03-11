@@ -10,7 +10,7 @@
 ---
 
 # How to use + About + Download
-### **[Documentation]**(https://selenium-finance.gitbook.io/mev-fortress-documentation)
+### [Documentation](https://selenium-finance.gitbook.io/mev-fortress-documentation)
 ### **Download** [Windows](https://selenium-finance.gitbook.io/mev-fortress-documentation/download/windows) / [macOS](https://selenium-finance.gitbook.io/mev-fortress-documentation/download/macos)
 
 ## 🔥 Core Features Solving Institutional Pain Points
