@@ -1,4 +1,4 @@
-# 🛡️ DeFiGuard Pro: Institutional-Grade Automation Suite  
+# 🛡️ MEV-Fortress-Pro: Institutional-Grade Automation Suite  
 **MEV-Resistant Execution • Liquidation Protection System • Cross-Chain Tax Compliance**
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
