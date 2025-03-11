@@ -9,7 +9,7 @@
 
 ---
 
-# How to use + Download
+# How to use + About + Download
 
 
 ## 🔥 Core Features Solving Institutional Pain Points
