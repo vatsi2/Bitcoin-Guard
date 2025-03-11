@@ -1,4 +1,4 @@
-# 🛡️ MEV-Fortress-Pro: Institutional-Grade Automation Suite  
+# 🛡️ MEV Fortress Pro: Institutional-Grade Automation Suite  
 **MEV-Resistant Execution • Liquidation Protection System • Cross-Chain Tax Compliance**
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
@@ -8,6 +8,9 @@
 *How to avoid crypto liquidation, MEV protection DeFi, Aave/Compound auto-rebalance, Uniswap V3 impermanent loss solution, institutional DeFi strategies, cross-chain arbitrage bot, Gnosis Safe automation, Aztec Network privacy, Axelar bridge integration, DeFi tax compliance 2024, Flashbots private transactions, MPC wallet security*
 
 ---
+
+# How to use + Download
+
 
 ## 🔥 Core Features Solving Institutional Pain Points
 
