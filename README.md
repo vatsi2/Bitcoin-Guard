@@ -31,6 +31,12 @@ Solves:
 
 "Exit liquidity pools when APR drops below 10%"
 
+- ✅ Adjustable liquidation thresholds in 1 click
+- ✅ Drag-and-drop strategy builder
+- ✅ Real-time preview of parameters
+- ✅ Customization profiles for different jurisdictions
+- ✅ Autosave configs in AWS Secrets Manager
+
 ### 2. MEV-Proof Execution Stack 🛡️
 > For traders moving $100k+ volumes
 
@@ -63,6 +69,29 @@ Solves:
 - Tax lot optimization (FIFO/LIFO/HIFO)
 
 - zk-SNARK privacy via Aztec Network
+
+# Key Features
+- ✅ Rule-Based Automation Without AI
+
+"How to avoid liquidation in crypto": Set triggers like "Close position if ETH < $2000".
+
+Auto-rebalance loans on AAVE/Compound (Python scripts) and farm liquidity pools (Uniswap V3, PancakeSwap).
+
+- ✅ MEV-Proof & Anti-Liquidation
+
+Protect large trades from frontrunning (EigenLayer + Flashbots).
+
+Dynamic margin calls: Add collateral or reduce leverage during volatility.
+
+- ✅ Institutional-Grade Security
+
+Multisig wallets (Gnosis Safe) + Fireblocks MPC integration.
+
+Halborn-audited code, OpenZeppelin audits.
+
+- ✅ DeFi Tax Reporting & Compliance
+
+Auto-generate reports for MiCA/SEC.
 
 # 🧩 Integrations
 Category | Technologies	| Use Case
