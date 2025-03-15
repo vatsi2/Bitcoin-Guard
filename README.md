@@ -74,15 +74,15 @@
   }
 }
 
-📄 License
+# 📄 License
 MIT License. Fork, adapt, and share!
 
-📈 Conversion-Driven SEO
+# 📈 Conversion-Driven SEO
 Targeted Queries: "How to automate DeFi arbitrage", "Best Aave Compound bot", "Hyperliquid stop-loss bot".
 
 Pain Points Solved: Users searching for passive DeFi income or volatility protection will find this repo first.
 
-CTA (Call-to-Action):
+# CTA (Call-to-Action):
 
 "⭐ Star the repo to track updates!"
 
