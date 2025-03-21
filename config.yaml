@@ -1,0 +1,15 @@
+networks:
+  ethereum:
+    node: "http://localhost:8545"
+    dao: "0x..."
+    tornado_round: 1 # 1 ETH
+  monero:
+    node: "http://127.0.0.1:28088"
+  bitcoin:
+    node: "http://user:pass@localhost:8332"
+security:
+  delay:
+    min: 3600 # 1 hour
+    max: 259200 # 3 days
+  decoy_percent: 10
+  ram_overwrite: true
