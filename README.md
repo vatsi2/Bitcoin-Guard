@@ -105,19 +105,31 @@ DevOps
     - Docker, GitHub Actions (CI/CD), Bandit/Slither (security audit)
 
 ## 🔗 Integrated Blockchains
+
 Blockchain	| Privacy Features | Use Case
+
 Monero	| Ring Signatures, Stealth Addr |	Base layer for anonymous mixing
+
 Bitcoin	| Taproot, CoinJoin |	Initial/final transactions
+
 Ethereum |	Tornado Cash, Aztec Protocol |	zkDAO storage, smart contracts
+
 Secret	| Private smart contracts |	Cross-chain swaps
+
 Zcash	| zk-SNARKs	| Shielded transactions
 
 ## 🔄 Integrated DEX & Protocols
+
 Platform	| Function	| Key Feature
+
 THORChain	| Cross-chain swaps (BTC/ETH/XMR)	| Non-custodial, no KYC
+
 Haveno	| Monero DEX	| Atomic swaps
+
 Uniswap	| ERC-20 token swaps	| Liquidity pools
+
 SecretSwap	| Privacy-preserving swaps	| Encrypted mempool
+
 Tornado Cash	| ETH/ERC-20 anonymization	| zk-proofs
 
     Latent Semantic Indexing (LSI) Keywords:
