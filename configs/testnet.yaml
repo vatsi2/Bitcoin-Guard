@@ -1,0 +1,12 @@
+networks:
+  ethereum:
+    node: "https://ropsten.infura.io/v3/YOUR_KEY"
+    dao: "0x6Bf694a291DF3FeC1f7e7F0176aC46eD28f4D5B0" # Tornado Testnet
+  monero:
+    node: "http://testnet.xmr.ru:28081"
+  bitcoin:
+    node: "http://user:pass@localhost:18332" # Bitcoin Testnet
+dex: thorchain_testnet
+security:
+  delay: 10 # минут для тестов
+  decoy_percent: 5
