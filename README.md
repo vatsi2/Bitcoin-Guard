@@ -37,7 +37,7 @@ Step 1: Input Phase
 
         - Install CCA on an air-gapped device (recommended: Tails OS).
 
-        - Connect wallet with DAO (MetaMask/TrustWallet/Another) or import a temporary seed phrase.
+        - Connect wallet with DAO (MetaMask/TrustWallet/Another)
 
      2. Network Isolation:
 
@@ -76,6 +76,129 @@ Step 4: Cleanup
     - RAM Wipe: Overwrite memory to erase keys, seeds, and transaction logs.
 
     - Decoy Traces: Generate fake transactions to mask real activity.
+
+## Main parameters
+
+### Basic settings
+```
+general:
+  mode: "auto"  # Mode of operation: auto (automatic), manual (manual)
+  log_level: "info"  # Logging level: debug, info, warning, error
+  temp_dir: "/tmp/cca"  # Temporary directory for data storage (cleared after completion)
+```
+
+### Blockchain settings
+```
+blockchains:
+  bitcoin:
+    node: "http://user:pass@localhost:8332"  # Bitcoin RPC node
+    network: "mainnet"  # Network: mainnet, testnet
+  ethereum:
+    node: "http://localhost:8545"  # Ethereum RPC node
+    gas_price: "auto"  # Gas price: auto or value in Gwei
+  monero:
+    node: "http://localhost:28088"  # Monero RPC node
+    wallet_password: "supersecret"  # Monero wallet password
+```
+
+### DEX settings
+```
+dex:
+  thorchain:
+    endpoint: "https://thornode.thorchain.info"  # API THORChain
+    slippage: 1.5  # Percentage of slippage (1.5%)
+  haveno:
+    endpoint: "http://havenoexchangexmra2x.onion"  # .onion-address Haveno
+    timeout: 30  # Request timeout (in seconds)
+```
+
+### DAO settings
+```
+dao:
+  tornado_cash:
+    contract: "0x6Bf694a291DF3FeC1f7e7F0176aC46eD28f4D5B0"  # Tornado Cash contract address
+    deposit_amount: 1  # Deposit amount (in ETH)
+  aztec:
+    contract: "0x..."  # Aztec contract address
+    zk_proofs: true  # Use zk-SNARKs
+```
+
+### Security settings
+```
+security:
+  tor:
+    enabled: true  # Use Tor for all requests
+    control_port: 9051  # Tor control port
+    socks_port: 9050  # SOCKS5 port for proxy
+  delay:
+    min: 3600  # Minimum delay between transactions (in seconds)
+    max: 86400  # Maximum delay (in seconds)
+  decoy_transactions: true  # Enable dummy transactions
+  decoy_percent: 5  # Percentage of funds for fictitious transactions (5%)
+```
+
+### Wallet settings
+```
+wallets:
+  output_count: 5  # Number of target wallets
+  hd_seed: "optional_seed_phrase"  # Seed-phrase for generating HD wallets
+  hardware_wallet: "ledger"  # Hardware wallet type: ledger, trezor
+```
+
+## Parameter description
+
+1. Basic parameters (```general```)
+
+    - mode: Mode of operation. In ```auto``` mode all transactions are performed automatically, in ```manual``` mode confirmation of each transaction is required.
+
+    - log_level: The level of detail of the logs.
+
+    - temp_dir: Directory for temporary files (e.g., signed transactions).
+
+2. Blockchains settings (```blockchains```)
+
+    - node: The RPC node address for each blockchain.
+
+    - network: Network (mainnet/testnet).
+
+    - gas_price: Gas price for Ethereum (can be specified manually or use ```auto```).
+
+    - wallet_password: Password for Monero wallet (if used).
+
+3. DEX settings (```dex```)
+
+    - endpoint: API address of DEX (e.g. THORChain or Haveno).
+
+    - slippage: Slippage percentage for exchanges.
+
+    - timeout: Timeout for DEX requests.
+
+4. DAO settings (```dao```)
+
+    - contract: Address of the DAO smart contract (e.g. Tornado Cash or Aztec).
+
+    - deposit_amount: Deposit amount in DAO (e.g. 1 ETH for Tornado Cash).
+
+    - zk_proofs: Use zk-SNARKs to increase privacy.
+
+5. Security Settings
+
+    - tor: Enable/disable Tor, configure ports.
+
+    - delay: Delay between transactions to prevent timestamp analysis.
+
+    - decoy_transactions: Enable dummy transactions for masking.
+
+    - decoy_percent: Percentage of funds sent to "trash" addresses.
+
+6. Wallets settings
+
+    - output_count: Number of target wallets to distribute funds to.
+
+    - hd_seed: Seed phrase for generating HD wallets (optional).
+
+    - hardware_wallet: Type of hardware wallet (Ledger or Trezor).
+
 
 ## ⚙️ Conditions & Requirements
 
