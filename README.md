@@ -463,7 +463,7 @@ wallets:
     - hd_seed: Seed phrase for generating HD wallets (optional).
 
     - hardware_wallet: Type of hardware wallet (Ledger or Trezor).
-
+```
 
 ## ⚙️ Conditions & Requirements
 
