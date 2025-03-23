@@ -243,6 +243,172 @@ wallets:
   hd_seed: "optional_seed_phrase"  # Seed-phrase for generating HD wallets
   hardware_wallet: "ledger"  # Hardware wallet type: ledger, trezor
 ```
+# **1. General Settings (`general`)**  
+### **mode**  
+**Description**: Program operation mode.  
+- `auto`: All transactions are executed automatically without manual confirmation.  
+- `manual`: Each transaction requires your approval.  
+**Recommendation**: Use `auto` for large sums to avoid manual intervention.  
+
+### **log_level**  
+**Description**: Logging verbosity level.  
+- `debug`: Detailed logs for debugging (may slow down performance).  
+- `info`: Key operational stages.  
+- `warning`: Only warnings and errors.  
+- `error`: Critical errors only.  
+**Recommendation**: For anonymity, use `error` or `warning`.  
+
+### **temp_dir**  
+**Description**: Temporary directory for data storage (e.g., signed transactions).  
+**Important**: The directory is cleared upon exit.  
+**Example**: `/tmp/cca` (Linux), `C:\Temp\cca` (Windows).  
+
+---
+
+## **2. Blockchain Settings (`blockchains`)**  
+### **Bitcoin**  
+#### **node**  
+**Description**: Bitcoin RPC node address.  
+**Format**: `http://user:password@host:port`.  
+**Example**: `http://admin:pass123@localhost:8332`.  
+
+#### **network**  
+**Description**: Blockchain network.  
+- `mainnet`: Main network.  
+- `testnet`: Test network (recommended for experiments).  
+
+---
+
+### **Ethereum**  
+#### **node**  
+**Description**: Ethereum RPC node address (Infura, Alchemy, or local node).  
+**Example**: `https://mainnet.infura.io/v3/YOUR_API_KEY`.  
+
+#### **gas_price**  
+**Description**: Gas price for transactions.  
+- `auto`: Network-determined price.  
+- Number: Price in Gwei (e.g., `50`).  
+**Recommendation**: Use `auto` to balance speed and cost.  
+
+---
+
+### **Monero**  
+#### **node**  
+**Description**: Monero RPC node address.  
+**Example**: `http://localhost:28088`.  
+
+#### **wallet_password**  
+**Description**: Password for accessing the Monero wallet.  
+**Important**: The password is stored only in RAM.  
+
+---
+
+## **3. DEX Settings (`dex`)**  
+### **THORChain**  
+#### **endpoint**  
+**Description**: THORChain node API address.  
+**Example**: `https://thornode.thorchain.info`.  
+
+#### **slippage**  
+**Description**: Acceptable price slippage during swaps (percentage).  
+**Example**: `1.5` (1.5% slippage).  
+
+---
+
+### **Haveno**  
+#### **endpoint**  
+**Description**: Haveno .onion address (accessible via Tor).  
+**Example**: `http://havenoexchangexmra2x.onion`.  
+
+#### **timeout**  
+**Description**: Maximum response timeout for DEX (in seconds).  
+**Recommendation**: Increase to `60` for slow connections.  
+
+---
+
+## **4. DAO Settings (`dao`)**  
+### **Tornado Cash**  
+#### **contract**  
+**Description**: Tornado Cash smart contract address.  
+**Example (Ethereum)**: `0x6Bf694a291DF3FeC1f7e7F0176aC46eD28f4D5B0`.  
+
+#### **deposit_amount**  
+**Description**: Deposit amount in ETH (common values: `0.1`, `1`, `10`).  
+
+---
+
+### **Aztec**  
+#### **contract**  
+**Description**: Aztec smart contract address.  
+**Example**: `0x...` (check Aztec documentation).  
+
+#### **zk_proofs**  
+**Description**: Enable zk-SNARKs for private transactions.  
+**Recommendation**: Always enable (`true`).  
+
+---
+
+## **5. Security Settings (`security`)**  
+### **Tor**  
+#### **enabled**  
+**Description**: Use Tor for all network requests.  
+**Recommendation**: Always `true`.  
+
+#### **control_port**  
+**Description**: Tor control port (default: `9051`).  
+
+#### **socks_port**  
+**Description**: SOCKS5 proxy port (default: `9050`).  
+
+---
+
+### **delay**  
+#### **min**  
+**Description**: Minimum delay between transactions (in seconds).  
+**Example**: `3600` (1 hour).  
+
+#### **max**  
+**Description**: Maximum delay between transactions (in seconds).  
+**Example**: `86400` (24 hours).  
+
+---
+
+### **decoy_transactions**  
+**Description**: Enable dummy transactions to mask activity.  
+**Recommendation**: Always `true`.  
+
+### **decoy_percent**  
+**Description**: Percentage of funds sent to random addresses.  
+**Example**: `5` (5% of the total amount).  
+
+---
+
+## **6. Wallet Settings (`wallets`)**  
+### **output_count**  
+**Description**: Number of target wallets for fund distribution.  
+**Recommendation**: Use `10` or more for sums >$100K.  
+
+### **hd_seed**  
+**Description**: Seed phrase for HD wallet generation.  
+**Important**: Auto-generated if left empty.  
+
+### **hardware_wallet**  
+**Description**: Hardware wallet type.  
+- `ledger`: Ledger support.  
+- `trezor`: Trezor support.  
+
+---
+
+## **7. Configuration Examples**  
+### For small amounts ($1K–$10K):  
+```yaml  
+security:  
+  delay:  
+    min: 1800  # 30 minutes  
+    max: 86400  # 24 hours  
+  decoy_percent: 3  
+wallets:  
+  output_count: 3
 
 ## Parameter description
 
