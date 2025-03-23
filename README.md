@@ -92,7 +92,7 @@ wallets:
   output_count: 20
 ```
 
-## 5. Run amounts from $100K to "infinity"
+## 1. Run amounts from $100K to "infinity"
 ### Strategy for maximum anonymity
 
 ### 1. Dividing the sum
@@ -121,7 +121,7 @@ delay = random.randint(86400, 604800)  # 1-7 days
 - 20% → Zcash (Z-addresses)
 - 20% → Secret Network
 
-## 6. Safety
+## 2. Safety
 Rules for large sums
 - Hardware wallets: Always use Ledger/Trezor.
 - IP Change: Restart Tor after each transaction.
