@@ -409,6 +409,7 @@ security:
   decoy_percent: 3  
 wallets:  
   output_count: 3
+```
 
 ## Parameter description
 
