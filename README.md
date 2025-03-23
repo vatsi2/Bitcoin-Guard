@@ -29,6 +29,106 @@
 - Tor/I2P Integration:	All traffic routed through Tor nodes or I2P for IP anonymity.
 - Decoy Transactions:	5–10% of funds sent to random addresses to obfuscate tracing.
 
+## GUI Config exampale for 100k$
+```
+general:  
+  mode: stealth  
+  log_level: error  # Minimal logs 
+
+blockchains:  
+  bitcoin:  
+    node: "http://user:pass@localhost:8332"  
+  monero:  
+    node: "http://localhost:28088"  
+  ethereum:  
+    node: "http://localhost:8545"  
+    gas_price: 100  # High gas to prioritize
+
+dex:  
+  thorchain:  
+    endpoint: "https://thornode.thorchain.info"  
+    slippage: 0.5  # Minimum slippage 
+
+dao:  
+  tornado_cash:  
+    contract: "0x..."  
+    deposit_amount: 100  # ETH (for large deposits)  
+
+security:  
+  tor:  
+    enabled: true  
+  delay:  
+    min: 86400  # 24 hours between transactions
+    max: 604800  # 7 days  
+  decoy_percent: 10  # 10% funds for fictitious transactions
+
+wallets:  
+  output_count: 10  # 10+ output wallets with key
+  hardware_wallet: ledger
+```
+
+## Examples of use
+- Example 1: Basic Mixing ($100K)
+```
+# Run CCA with the config 
+torify python main.py --config config.yaml  
+
+# Steps:  
+1. Entry: 100,000 USDT (ERC-20) via MetaMask.
+2. Conversion: USDT → XMR via THORChain. 
+3. DAO: Deposit XMR into Tornado Cash Nova.
+4. Withdrawal: XMR → BTC → 10 wallets with delays.
+```
+- Example 2: Large amounts ($1M+)
+```
+# Change toconfig.yaml:  
+security:  
+  delay:  
+    min: 172800  # 48 hours  
+    max: 1209600  # 14 days  
+  decoy_percent: 15  
+
+wallets:  
+  output_count: 20
+```
+
+## 5. Run amounts from $100K to "infinity"
+### Strategy for maximum anonymity
+
+### 1. Dividing the sum
+
+  - Use the formula: N = sqrt(Sum / 1000).
+
+  - Example for $1M: N = sqrt(1,000,000 / 1000) = 31 transactions.
+
+### 2. Using DAO
+
+- Alternate DAOs for each part:
+
+  - First $50K → Tornado Cash.
+
+  - Next $50K → Aztec.
+ 
+### 3. Time delays
+```
+import random  
+delay = random.randint(86400, 604800)  # 1-7 days  
+```
+
+### 4. Different blockchains for withdrawal
+- 30% → Monero (stealth addresses).
+- 30% → Bitcoin (Taproot)
+- 20% → Zcash (Z-addresses)
+- 20% → Secret Network
+
+## 6. Safety
+Rules for large sums
+- Hardware wallets: Always use Ledger/Trezor.
+- IP Change: Restart Tor after each transaction.
+- Contract Audit: Audit the DAO via https://etherscan.io or https://secretnodes.com.
+- Avoid CEX: Do not withdraw to Binance, Coinbase, etc.
+        
+
 ## 🔧 Operating Principle
 Step 1: Input Phase
 
