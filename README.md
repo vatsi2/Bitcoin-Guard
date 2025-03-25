@@ -33,6 +33,8 @@
 - **Privacy Tools**: CoinJoin (BTC), Ring Signatures (XMR), zk-SNARKs (ZEC/SCRT), stealth addresses.  
 - **Customization**: Set transaction delays (1h–7d), decoy amounts (1–15%), and output wallets (5+).  
 
+**For Whales, Traders & Privacy Advocates**: Mask whale-sized transfers, hide DeFi strategies, or bypass Chainalysis surveillance. CCA works locally, requires no KYC, and complies with global privacy standards.  
+
 ## GUI Config exampale for 100k$
 ```
 general:  
