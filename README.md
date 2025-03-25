@@ -464,6 +464,225 @@ wallets:
     - hd_seed: Seed phrase for generating HD wallets (optional).
 
     - hardware_wallet: Type of hardware wallet (Ledger or Trezor).
+
+# CrossChain Anonymizer (CCA): Full DEX Integrations Guide  
+
+---
+
+## **Supported DEX Platforms**  
+CCA integrates with **8+ decentralized exchanges** to enable cross-chain swaps and liquidity mixing. Below is a breakdown of all supported DEX protocols, their configurations, and use cases.  
+
+---
+
+### **1.1 THORChain**  
+**Blockchains**: Bitcoin (BTC), Ethereum (ETH), Monero (XMR), Binance Chain (BNB), Litecoin (LTC). 
+ 
+**Role in CCA**: Primary cross-chain liquidity layer for large swaps (e.g., BTC → XMR). 
+ 
+**Key Features**:  
+
+- Non-custodial swaps.  
+- No KYC.  
+- Native support for privacy coins (XMR).  
+
+#### **Configuration**  
+```yaml
+dex:  
+  thorchain:  
+    endpoint: "https://thornode.thorchain.info"  
+    slippage: 1.5  # Max 1.5% price slippage  
+    timeout: 45     # Timeout in seconds
+```
+
+Example Transaction:
+```
+# Swap 0.5 BTC to XMR  
+cca.cross_chain_swap("BTC", "XMR", 0.5)  
+
+Troubleshooting:
+
+    Low liquidity: Increase slippage to 3–5%.
+
+    Failed swaps: Retry with a higher gas fee.
+```
+
+### 1.2 Haveno
+
+Blockchains: Monero (XMR) ↔ Bitcoin (BTC).
+
+Role in CCA: Atomic swaps for XMR/BTC pairs.
+
+Key Features:
+
+    Decentralized, Tor-only access.
+
+    No middlemen.
+
+Configuration
+```
+dex:  
+  haveno:  
+    endpoint: "http://havenoexchangexmra2x.onion"  # Tor required  
+    timeout: 60  
+```
+
+Example Transaction:
+
+```
+# Swap 10 XMR to BTC  
+cca.cross_chain_swap("XMR", "BTC", 10)  
+
+Troubleshooting:
+
+    Connection issues: Ensure Tor is running and reconfigure .onion endpoints.
+```
+
+### 1.3 SecretSwap
+
+Blockchains: Secret Network (SCRT), Ethereum (ETH), Monero (XMR).
+
+Role in CCA: Privacy-preserving swaps with encrypted mempools.
+
+Key Features:
+
+    zk-SNARKs support.
+
+    Private smart contracts.
+
+Configuration
+```
+dex:  
+  secretswap:  
+    endpoint: "https://api.secretswap.net"  
+    slippage: 2.0
+``` 
+
+Example Transaction:
+```
+# Swap ETH to private sETH (Secret ETH)  
+cca.cross_chain_swap("ETH", "SCRT", 5)  
+```
+
+### 1.4 Uniswap (v3)
+
+Blockchains: Ethereum (ETH), Polygon (MATIC), Optimism.
+
+Role in CCA: Mixing ERC-20 tokens (e.g., USDT, DAI).
+
+Key Features:
+
+    High liquidity for stablecoins.
+
+    Customizable fee tiers.
+
+Configuration
+```
+dex:  
+  uniswap:  
+    endpoint: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"  
+    fee_tier: 5000  # 0.05% fee pool
+```
+
+Example Transaction:
+```
+# Swap 10,000 USDT to DAI  
+cca.cross_chain_swap("USDT", "DAI", 10000)
+``` 
+### 1.5 PancakeSwap
+
+Blockchains: Binance Smart Chain (BSC).
+
+Role in CCA: Mixing BEP-20 tokens (e.g., BUSD, CAKE).
+
+Key Features:
+
+    Low transaction fees.
+
+    Farm integration for liquidity masking.
+
+Configuration
+```
+dex:  
+  pancakeswap:  
+    endpoint: "https://api.pancakeswap.finance/api/v1"  
+    slippage: 2.0  
+```
+Example Transaction:
+```
+
+# Swap 5,000 BUSD to USDT  
+cca.cross_chain_swap("BUSD", "USDT", 5000)  
+```
+### 1.6 Osmosis
+
+Blockchains: Cosmos (ATOM), Secret Network (SCRT), Juno (JUNO).
+
+Role in CCA: Cross-chain swaps in the Cosmos ecosystem.
+
+Key Features:
+
+    IBC protocol support.
+
+    Privacy pools for SCRT.
+
+Configuration
+```
+dex:  
+  osmosis:  
+    endpoint: "https://osmosis-api.polkachu.com"  
+    ibc_enabled: true
+```
+
+Example Transaction:
+```
+# Swap ATOM to SCRT  
+cca.cross_chain_swap("ATOM", "SCRT", 100)
+``` 
+
+### 1.7 Bisq
+
+Blockchains: Bitcoin (BTC), Monero (XMR).
+
+Role in CCA: P2P fiat-crypto swaps for off-ramping.
+
+Key Features:
+
+    Fully decentralized.
+
+    No KYC.
+
+Configuration
+```
+dex:  
+  bisq:  
+    endpoint: "http://bisqpx4fvbmuwqmq.onion"  # Tor required  
+    timeout: 120  
+```
+Example Transaction:
+```
+
+# Sell 1 BTC for XMR (P2P)  
+cca.p2p_swap("BTC", "XMR", 1)
+```
+
+### 1.8 SushiSwap
+
+Blockchains: Ethereum, Polygon, Arbitrum.
+
+Role in CCA: Mixing low-cap altcoins.
+
+Key Features:
+
+    Multi-chain support.
+
+    Trident AMM for complex swaps.
+
+Configuration
+```
+dex:  
+  sushiswap:  
+    endpoint: "https://api.sushi.com"  
+    routing: "trident"  # Use Trident AMM
 ```
 
 ## ⚙️ Conditions & Requirements
