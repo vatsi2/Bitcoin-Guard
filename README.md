@@ -1,7 +1,7 @@
 # 🛡️ Decentralized Crypto Mixer: Cross-Chain Privacy, DEX Integration & Zero-Knowledge DAOs
-**CrossChain Anonymizer is an open-source, self-hosted crypto mixer for 100% anonymous cross-chain transactions. Leveraging ZK-proofs, decentralized exchanges (DEX), and privacy-focused blockchains, it ensures untraceable transfers across Bitcoin, Monero, Ethereum, and more. Ideal for blockchain developers, privacy advocates, and DeFi enthusiasts.**
+**CrossChain Anonymizer (CCA)** is the ultimate self-hosted crypto privacy solution for **Bitcoin (BTC)**, **Ethereum (ETH)**, **Monero (XMR)**, **Zcash (ZEC)**, **Secret Network (SCRT)**, **Avalanche (AVAX)**, **Polygon (MATIC)**, **Binance Smart Chain (BSC)**, **Cosmos (ATOM)**, **Fantom (FTM)**, and **20+ blockchains**. Leverage **zero-knowledge proofs (zk-SNARKs)**, **cross-chain swaps** (via THORChain, SecretSwap, Haveno), and **DAO-based anonymization** (Tornado Cash, Aztec) to erase transaction trails.
 
-> Achieve 100% blockchain anonymity with CrossChain Anonymizer. Mix BTC, ETH, XMR via DEX/DAO integration, ZK-proofs, and Tor. Self-hosted, audited, and open-source.
+> A privacy-first crypto mixer for Bitcoin, Ethereum, Monero, Secret Network, Zcash, and more. Use cross-chain swaps via DEXs (THORChain, SecretSwap) and DAOs (Tornado Cash, Aztec) to anonymize funds. Route transactions through Tor, zk-proofs, and custom networks—just add your chains in settings. 
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
@@ -20,14 +20,18 @@
 
 ---
 
-## 🌟 Main Features
+## 🌟 **Why Choose CCA?**  
 
-- Multi-Chain Mixing: Mix BTC, ETH, XMR, ZEC, and more via integrated blockchains.
-- DAO Storage:	Store funds in zero-knowledge DAOs (Aztec, Tornado Cash, Secret Network).
-- Auto Wallet Generation:	Create 5+ one-time wallets per session (HD seeds, encrypted in RAM).
-- DEX Routing:	Swap assets via THORChain, Haveno, SecretSwap, and Uniswap.
-- Tor/I2P Integration:	All traffic routed through Tor nodes or I2P for IP anonymity.
-- Decoy Transactions:	5–10% of funds sent to random addresses to obfuscate tracing.
+- **100% Non-Custodial**: Private keys never leave your device.  
+- **Multi-Chain Mixing**: Convert BTC ↔ XMR ↔ ETH ↔ SCRT in one session.  
+- **Military-Grade Privacy**: Tor routing, RAM-only encryption, and hardware wallet (Ledger/Trezor) support.  
+- **DEX Integration**: Swap assets privately via THORChain, Uniswap, PancakeSwap, and SecretSwap.  
+- **DAO Vaults**: Store funds in Tornado Cash, Aztec, or custom zk-SNARKs DAOs.  
+
+### **Supported Networks & Features**  
+- **Blockchains**: Bitcoin, Ethereum, Monero, Zcash, Secret Network, BSC, Avalanche, Polygon, Cosmos, Fantom, Harmony, Cronos, Pulsechain, and more.  
+- **Privacy Tools**: CoinJoin (BTC), Ring Signatures (XMR), zk-SNARKs (ZEC/SCRT), stealth addresses.  
+- **Customization**: Set transaction delays (1h–7d), decoy amounts (1–15%), and output wallets (5+).  
 
 ## GUI Config exampale for 100k$
 ```
