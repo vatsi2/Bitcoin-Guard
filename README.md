@@ -35,6 +35,8 @@
 
 **For Whales, Traders & Privacy Advocates**: Mask whale-sized transfers, hide DeFi strategies, or bypass Chainalysis surveillance. CCA works locally, requires no KYC, and complies with global privacy standards.  
 
+# Disclamer: The app is developed by a team of experienced developers for review purposes, the team is not responsible for how the mixer is used and has no involvement in any way
+
 ## GUI Config exampale for 100k$
 ```
 general:  
