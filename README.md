@@ -1,7 +1,7 @@
 # 🛡️ Bitcoin DEX Trading Software
 ## 🔥 **Description**  
 **Bitcoin DEX Trading Software** is an open-source, desktop-first platform for **secure Bitcoin trading**, **cross-exchange arbitrage**, and **institutional-grade portfolio management**. Designed for traders with $50k+ portfolios, it combines **military-grade encryption**, **real-time blockchain analytics**, and **non-custodial trading** across 30+ CEX/DEX.
-
+<p align="center"><img width="820" height="494" src="dashboard/ui.jpg" alt="Bot interface" /></p>
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
