@@ -29,6 +29,72 @@
 - 📑 **Tax Reports**: Auto-generate FIFO/LIFO/HIFO docs for 40+ countries.  
 - 🚫 **OFAC Filter**: Block transactions to sanctioned addresses (Chainalysis integration).
 
+## Detailed description of functions
+### 1. Portfolio manager
+What does
+- Aggregates balances from all connected CEX and DEX in a single interface
+- Converts assets to BTC, USD or other selected currency
+
+How it works
+- Uses exchanges API keys (with read-only permissions) to import data
+- Locally encrypts keys and transaction history (AES-256)
+- Generates reports on profitability, including taxes (FIFO/LIFO)
+
+### 2. Trading Terminal
+What does
+- Allows trading on CEX and DEX through a single interface
+- Supports limit orders, OTC trades and algorithmic strategies (e.g. Grid trading)
+
+How it works
+- For CEX: sends orders through encrypted APIs with limited rights (no withdrawal)
+- For DEX: interacts with smart contracts via Ethereum local node
+- For cross-chain swaps (BTC → ETH): uses atomic swaps via protocols like THORChain
+
+### 3. Blockchain Analytics
+What does
+- Tracks large Bitcoin transactions (>50 BTC) and "whale" activity
+- Visualizes the relationships between addresses
+
+How it works
+- Analyzes data through a local Bitcoin node (full or lightweight)
+- Builds transaction graphs using libraries (e.g. Graphviz)
+- Filters addresses against blacklists (OFAC) from the local database
+
+### 4. Mempool monitoring
+What does
+- Shows unconfirmed transactions on the Bitcoin network
+- Predicts confirmation time and recommends to the commission
+
+How it works
+- Collects data from the local mempool
+- Analyzes historical patterns (e.g., average commissions at different times of day)
+
+### 5. Risk management system
+What does
+- Sets limits on trading volume, stop loss and take profit limits
+- Simulates market crash scenarios
+
+How it works
+- Uses historical data (e.g. BTC's 80% drop in 2018)
+- Sends notifications to the desktop when thresholds are reached
+
+### 6.Integration with DEX/CEX
+What does
+- Combines access to decentralized (Uniswap, THORSwap) and centralized (Binance, Kraken) exchanges
+
+How it works
+- For DEX: interacts directly with smart contracts via Web3.js/Ethers.js.
+- For CEX: uses REST APIs of exchanges with two-factor authentication.
+- For cross-chain operations (BTC → wBTC): connects to bridges (RenBridge) or atomic swaps.
+
+### 7. Bitcoin local node
+What does
+- Provides complete independence from third-party services
+
+How it works
+- Synchronizes the blockchain in Full Node or Pruned Node mode (to save space)
+- Supports working through Tor for anonymity
+
 ## 🌐 **Integrated Exchanges**  
 
 ### **DEX Support**  
