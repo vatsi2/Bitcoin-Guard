@@ -39,9 +39,199 @@ Bitcoin Security Software | Tax Optimization & Multisig Wallet | OTC Trading & R
 ### 🌐 Regulatory Watchdog
 - Real-time updates on **MiCA (EU), IRS Form 8949, FATF Travel Rule**.  
 - **KYC/AML Checklist** for transactions >$10k.  
-- **Jurisdiction Analyzer** (compare tax rates across 50+ countries).  
+- **Jurisdiction Analyzer** (compare tax rates across 50+ countries).
 
-## ⚙️ Customizable Settings(Just choose in GUI)
+## Core Modules
+
+### 1. Secure Vault (Storage)
+
+Functionality:
+  - Integration with hardware wallets (Ledger, Trezor) via local API.
+  - Generation of multisignature addresses with key distribution across trusted devices.
+  - AES-256 encryption for data storage, with keys kept only on the user’s device.
+  - Automatic encrypted backups to external storage.
+  - Solves: Protection against hacks and key loss.
+
+### 2. Tax Optimizer (Tax Calculator)
+
+Functionality:
+  - Offline analysis of BTC transaction chains (via local Bitcoin Core node).
+  - Tax liability calculations for jurisdictions (USA, EU, Switzerland, etc.) using FIFO, LIFO, HIFO.
+  - Generation of tax reports in formats compatible with authorities (PDF/Excel).
+  - Simulation of withdrawal scenarios for tax minimization (e.g., stablecoins, OTC trades).
+  - Solves: Tax optimization and regulatory risks.
+
+### 3. Liquidity Planner (Liquidity Manager)
+
+Functionality:
+  - Offline simulator for large BTC sales using historical liquidity data (e.g., cached Glassnode API).
+  - Calculation of optimal orders to minimize slippage and market impact.
+  - Integration with P2P platforms and OTC exchanges via encrypted API keys (no server data transfer).
+  - Solves: Managing volatility and liquidity.
+
+### 4. Regulatory Watchdog (Compliance Monitor)
+
+Functionality:
+  - Local database of up-to-date cryptocurrency laws (updated via decentralized networks like IPFS).
+  - Encrypted RSS notifications for regulatory changes (e.g., EU anonymous transaction bans).
+  - KYC/AML checklists for fund withdrawals.
+  - Solves: Regulatory uncertainty.
+
+### 5. Cycle Tracker (Market Cycle Analyzer)
+
+Functionality:
+  - Analysis of halvings, hash rate, and whale activity via blockchain data (no third-party servers).
+  - Local graphics engine for price models (e.g., Stock-to-Flow forecasts).
+  - Event calendar (e.g., BTC ETF application deadlines).
+  - Solves: Cycle forecasting and decision-making.
+
+### Tech Stack
+  - Language: Rust (security and performance).
+  - Database: SQLite with table-level encryption.
+  - Network: Tor support for anonymous API requests.
+  - UI: Qt Framework (cross-platform: Windows, macOS, Linux).
+
+### Core Principles
+  - Zero-Trust Architecture: All data processed locally; no cloud sync.
+  - Transparency: Open-source code (community-audited).
+  - Autonomy: Offline operation (except modules requiring external data).
+
+### Use Case Example
+
+Scenario: A holder of 50 BTC wants to sell 10 BTC while minimizing taxes and market impact.
+  1. Liquidity Planner simulates an OTC trade.
+  2. Tax Optimizer uses HIFO to reduce tax payments by 15%.
+  3. Regulatory Watchdog verifies EU compliance.
+  4. Secure Vault signs the transaction via multisignature.
+
+
+## ⚙️ Configurable Settings & Usage Guide(Just choose in GUI)
+Configurable Settings & Usage Guide
+### I. Configurable Parameters
+#### 1. Secure Vault (Storage Module)
+
+Parameters:
+
+- Multisignature:
+  - Signature threshold (e.g., 2/3, 3/5).
+  - Key storage devices (Ledger, Trezor, cold wallets).
+
+- Encryption:
+  - Algorithm (AES-256, ChaCha20).
+  - Auto-backup frequency (daily/weekly).
+
+- Transaction Threshold:
+  - Minimum amount to trigger multisig (e.g., >1 BTC).
+
+#### 2. Tax Optimizer (Tax Module)
+
+Parameters:
+
+- Tax Calculation Method: FIFO, LIFO, HIFO.
+- Jurisdictions: Country selection (USA, Germany, Singapore, etc.).
+- Optimization Scenarios:
+  - Stablecoin conversion threshold (e.g., sell BTC if price >$60k).
+  - Alerts for tax benefits (e.g., long-term holdings).
+
+#### 3. Liquidity Planner (Liquidity Module)
+
+Parameters:
+
+- Order Limits:
+  - Max daily sell volume (e.g., 5 BTC).
+  - Slippage tolerance (e.g., <2%).
+
+- Data Sources:
+  - Glassnode integration (cached via IPFS).
+  - Manual liquidity input for OTC trades.
+
+#### 4. Regulatory Watchdog (Compliance Module)
+
+Parameters:
+
+- Notification Filters:
+  - Regions (EU, USA, Asia).
+  - Event types (bans, taxes, KYC).
+
+- Checklists:
+  - Withdrawal requirements (e.g., verification for >$10k transactions).
+
+#### 5. Cycle Tracker (Market Analysis Module)
+
+Parameters:
+
+- Forecast Models:
+  - Algorithm selection (Stock-to-Flow, Mayer Multiple).
+  - Halving/whale activity alerts.
+
+- Event Calendar:
+  - Custom event tagging (e.g., BTC ETF deadlines).
+
+### II. Usage in Specific Scenarios
+
+Scenario 1: Selling 20 BTC with Minimal Taxes & Market Impact
+  - Liquidity Planner Setup:
+    1. Set daily sell limit: 5 BTC/day with <1% slippage.
+    2. Load historical liquidity data for Binance OTC.
+
+  - Tax Calculation:
+    1. Enable HIFO to prioritize high-cost BTC sales.
+    2. Export PDF report for tax authorities.
+
+  - Transaction Signing:
+    1. Use 3/5 multisig (2 hardware wallets + 1 PC).
+
+Scenario 2: Mitigating EU Regulatory Changes
+  - Regulatory Watchdog Setup:
+    1. Enable alerts for "anonymous wallet bans."
+    2. Sync laws via IPFS node.
+
+  - Secure Vault Adjustments:
+    1. Activate KYC checklist for >€1000 transactions.
+    2. Update encrypted backups to an external SSD.
+
+Scenario 3: Long-Term Holding (HODL)
+  - Cycle Tracker Setup:
+    1. Enable alerts for halvings and $100k price target.
+    2. Plot Stock-to-Flow model for trend analysis.
+
+  - Backup Strategy:
+    1. Weekly encrypted backups to 2 hardware wallets.
+
+### III. Critical Security Settings
+- Tor Integration:
+  - Route all traffic via Tor (Settings → Network → Anonymity).
+
+- Database Encryption:
+  - Set SQLite password + AES-256 encryption (Settings → Security → Database Encryption).
+
+- Offline Mode:
+  - Disable internet for non-essential modules (Tax Optimizer, Secure Vault).
+
+### IV. Example Configuration (config.yaml)
+```
+security:  
+  multisig_threshold: 3/5  
+  encryption: AES-256  
+  backup_interval: weekly  
+tax:  
+  method: HIFO  
+  jurisdiction: USA  
+liquidity:  
+  daily_limit: 5 BTC  
+  slippage_tolerance: 1%  
+regulatory:  
+  regions: [EU, US]  
+  alerts: [ban, tax]  
+network:  
+  tor_enabled: true  
+  bitcoin_node: ~/.bitcoin
+```
+
+### V. Recommendations
+- For >$500k transactions, use OTC deals via Liquidity Planner.
+- Before halvings, enable "Accumulation Mode" in Cycle Tracker to analyze historical patterns.
+- Store Secure Vault backups on hardware media in a safe.
 
 ### 🔧 Security Module
 ```
@@ -121,12 +311,12 @@ Goal: Monitor balances and execute OTC trades.
 Settings:
 
 - Read-Only API Keys:
-  - Users create API keys with no trading/withdrawal permissions.
-  - Keys are encrypted locally (XChaCha20-Poly1305) and stored in SQLite.
+   - Users create API keys with no trading/withdrawal permissions.
+   - Keys are encrypted locally (XChaCha20-Poly1305) and stored in SQLite.
 
 - Manual CSV Import:
-  - For full isolation: upload exchange transaction history files.
-  - Supported formats: Binance CSV, Coinbase Form 8949.
+   - For full isolation: upload exchange transaction history files.
+   - Supported formats: Binance CSV, Coinbase Form 8949.
 
 
 - Offline Sync:
@@ -152,13 +342,12 @@ Goal: Support any wallet (Electrum, Exodus, Trezor Suite).
 Settings:
 
 - xPub/yPub/zPub Key Import:
-
-  - Users enter a wallet’s public key → Royen tracks balances/transactions via a local Bitcoin Core node.
-  - Data never leaves the device.
+   - Users enter a wallet’s public key → Royen tracks balances/transactions via a local Bitcoin Core node.
+   - Data never leaves the device.
 
 - Hardware Wallet Integration:
-  - Connect Ledger/Trezor via USB.
-  - Read addresses and sign transactions without exporting private keys.
+   - Connect Ledger/Trezor via USB.
+   - Read addresses and sign transactions without exporting private keys.
 
 Example for Ledger:
 
@@ -169,19 +358,16 @@ Example for Ledger:
 ### 4. Security Rules
 
 - CEX Key Isolation:
-
-  - API keys are encrypted and never used for automated actions.
-  - Access requires a master password.
+   - API keys are encrypted and never used for automated actions.
+   - Access requires a master password.
 
 - Wallet Audits:
-
-  - Security Audit section → risk reports (e.g., "Wasabi Wallet v2.0 has CVE-2023-XXX vulnerability").
+   - Security Audit section → risk reports (e.g., "Wasabi Wallet v2.0 has CVE-2023-XXX vulnerability").
 
 - Tor Routing for CEX Requests:
+   - All manual HTTP requests to exchanges use the built-in Tor client.
 
-  - All manual HTTP requests to exchanges use the built-in Tor client.
-
-5. Configuration Example
+### 5. Configuration Example
 
 File wallets.yaml:
 ```
@@ -203,7 +389,7 @@ wallets:
     xpub: "zpub6..."
 ```
 
-6. Usage Scenarios
+### 6. Usage Scenarios
 
 Scenario 1: CoinJoin Privacy Analysis
 
