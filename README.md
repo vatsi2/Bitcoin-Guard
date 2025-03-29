@@ -100,124 +100,98 @@ network:
   api_whitelist: ["glassnode.com", "blockchain.info"]
 ```
 ## Wallet integration (Wasabi, Electrum, CEX)
-1. Connecting Wasabi Wallet
+
+### 1. Connecting Wasabi Wallet
 
 Goal: Import transactions, balances, and CoinJoin data.
 
 Settings:
 
-    Local File Sync:
+- Local File Sync:
+ - Wasabi stores data in the WalletFiles folder. BitGuard Pro scans this directory (with user permission) and imports:
+  - Public addresses.
+  - CoinJoin transaction history.
+  - Balances (encrypted).
+ - Data encryption: AES-256 with a key derived from the user’s master password.
 
-        Wasabi stores data in the WalletFiles folder. BitGuard Pro scans this directory (with user permission) and imports:
-
-            Public addresses.
-
-            CoinJoin transaction history.
-
-            Balances (encrypted).
-
-        Data encryption: AES-256 with a key derived from the user’s master password.
-
-    Advanced API Integration:
-
-        Run Wasabi in the background with access to its RPC interface (port 37128).
-
-        Example balance request:
-        bash
-        Copy
-
-        curl --data '{"jsonrpc":"2.0","method":"getbalance"}' http://localhost:37128/  
-
-        BitGuard Pro uses this data for privacy analysis (e.g., tracking mixed UTXOs).
+-  Advanced API Integration:
+  - Run Wasabi in the background with access to its RPC interface (port 37128).
+  - Example balance request:
+```
+        curl --data '{"jsonrpc":"2.0","method":"getbalance"}' http://localhost:37128/
+```
+ - Royen uses this data for privacy analysis (e.g., tracking mixed UTXOs).
 
 Risks:
+- Accessing Wasabi files requires disabling its "read-only mode."
+- Solution: "Import-only" mode without write permissions.
 
-    Accessing Wasabi files requires disabling its "read-only mode."
-
-    Solution: "Import-only" mode without write permissions.
-
-2. Integration with CEX (Binance, Coinbase, Kraken)
+### 2. Integration with CEX (Binance, Coinbase, Kraken)
 
 Goal: Monitor balances and execute OTC trades.
 
 Settings:
 
-    Read-Only API Keys:
+- Read-Only API Keys:
+  - Users create API keys with no trading/withdrawal permissions.
+  - Keys are encrypted locally (XChaCha20-Poly1305) and stored in SQLite.
 
-        Users create API keys with no trading/withdrawal permissions.
+- Manual CSV Import:
+  - For full isolation: upload exchange transaction history files.
+  - Supported formats: Binance CSV, Coinbase Form 8949.
 
-        Keys are encrypted locally (XChaCha20-Poly1305) and stored in SQLite.
 
-    Manual CSV Import:
-
-        For full isolation: upload exchange transaction history files.
-
-        Supported formats: Binance CSV, Coinbase Form 8949.
-
-    Offline Sync:
-
-        To fetch real-time data:
-
-            BitGuard Pro generates API requests.
-
-            Users manually copy them to a browser with VPN/Tor enabled.
-
-            Responses (JSON) are imported via QR code or file.
+- Offline Sync:
+  - To fetch real-time data:
+    1. Royen generates API requests.
+    2. Users manually copy them to a browser with VPN/Tor enabled.
+    3. Responses (JSON) are imported via QR code or file.
 
 Example Workflow for Binance:
 
-    In the CEX Sync section, select "Binance."
+1. In the CEX Sync section, select "Binance."
+2. Copy the generated balance request URL:
+```
+    https://api.binance.com/api/v3/account?timestamp=123456789&signature=XXXXX
+```
+3. Open the URL in an isolated browser, log in, and save the response as binance_balance.json.
+4. Load the file into Royen → data is decrypted and analyzed offline.
 
-    Copy the generated balance request URL:
-    Copy
-
-    https://api.binance.com/api/v3/account?timestamp=123456789&signature=XXXXX  
-
-    Open the URL in an isolated browser, log in, and save the response as binance_balance.json.
-
-    Load the file into BitGuard Pro → data is decrypted and analyzed offline.
-
-3. Universal Wallet Module
+### 3. Universal Wallet Module
 
 Goal: Support any wallet (Electrum, Exodus, Trezor Suite).
 
 Settings:
 
-    xPub/yPub/zPub Key Import:
+- xPub/yPub/zPub Key Import:
 
-        Users enter a wallet’s public key → BitGuard Pro tracks balances/transactions via a local Bitcoin Core node.
+  - Users enter a wallet’s public key → Royen tracks balances/transactions via a local Bitcoin Core node.
+  - Data never leaves the device.
 
-        Data never leaves the device.
-
-    Hardware Wallet Integration:
-
-        Connect Ledger/Trezor via USB.
-
-        Read addresses and sign transactions without exporting private keys.
+- Hardware Wallet Integration:
+  - Connect Ledger/Trezor via USB.
+  - Read addresses and sign transactions without exporting private keys.
 
 Example for Ledger:
 
-    In the Wallets section, select "Ledger."
+1. In the Wallets section, select "Ledger."
+2. Connect the device and confirm access on the Ledger screen.
+3. Royen displays balances and prompts to sign pre-built transactions.
 
-    Connect the device and confirm access on the Ledger screen.
+### 4. Security Rules
 
-    BitGuard Pro displays balances and prompts to sign pre-built transactions.
+- CEX Key Isolation:
 
-4. Security Rules
+  - API keys are encrypted and never used for automated actions.
+  - Access requires a master password.
 
-    CEX Key Isolation:
+- Wallet Audits:
 
-        API keys are encrypted and never used for automated actions.
+  - Security Audit section → risk reports (e.g., "Wasabi Wallet v2.0 has CVE-2023-XXX vulnerability").
 
-        Access requires a master password.
+- Tor Routing for CEX Requests:
 
-    Wallet Audits:
-
-        Security Audit section → risk reports (e.g., "Wasabi Wallet v2.0 has CVE-2023-XXX vulnerability").
-
-    Tor Routing for CEX Requests:
-
-        All manual HTTP requests to exchanges use the built-in Tor client.
+  - All manual HTTP requests to exchanges use the built-in Tor client.
 
 5. Configuration Example
 
@@ -245,17 +219,14 @@ wallets:
 
 Scenario 1: CoinJoin Privacy Analysis
 
-    Import Wasabi data into BitGuard Pro.
-
-    In the Tax Optimizer, label mixed UTXOs as "non-personally associated."
-
-    Generate tax reports excluding anonymized transactions (where legal).
+1. Import Wasabi data into Royen.
+2. In the Tax Optimizer, label mixed UTXOs as "non-personally associated."
+3. Generate tax reports excluding anonymized transactions (where legal).
 
 Scenario 2: Monitoring CEX Risks
+1. Load Binance balances via manual JSON import.
+2. If the exchange freezes withdrawals, Regulatory Watchdog suggests moving BTC to a decentralized wallet.
 
-    Load Binance balances via manual JSON import.
-
-    If the exchange freezes withdrawals, Regulatory Watchdog suggests moving BTC to a decentralized wallet.
     
 ## 🧩 Example Use Cases
 
