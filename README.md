@@ -50,7 +50,7 @@ Functionality:
   - Generation of multisignature addresses with key distribution across trusted devices.
   - AES-256 encryption for data storage, with keys kept only on the user’s device.
   - Automatic encrypted backups to external storage.
-  - Solves: Protection against hacks and key loss.
+Solves: Protection against hacks and key loss.
 
 ### 2. Tax Optimizer (Tax Calculator)
 
@@ -59,7 +59,7 @@ Functionality:
   - Tax liability calculations for jurisdictions (USA, EU, Switzerland, etc.) using FIFO, LIFO, HIFO.
   - Generation of tax reports in formats compatible with authorities (PDF/Excel).
   - Simulation of withdrawal scenarios for tax minimization (e.g., stablecoins, OTC trades).
-  - Solves: Tax optimization and regulatory risks.
+Solves: Tax optimization and regulatory risks.
 
 ### 3. Liquidity Planner (Liquidity Manager)
 
@@ -67,7 +67,7 @@ Functionality:
   - Offline simulator for large BTC sales using historical liquidity data (e.g., cached Glassnode API).
   - Calculation of optimal orders to minimize slippage and market impact.
   - Integration with P2P platforms and OTC exchanges via encrypted API keys (no server data transfer).
-  - Solves: Managing volatility and liquidity.
+Solves: Managing volatility and liquidity.
 
 ### 4. Regulatory Watchdog (Compliance Monitor)
 
@@ -75,7 +75,7 @@ Functionality:
   - Local database of up-to-date cryptocurrency laws (updated via decentralized networks like IPFS).
   - Encrypted RSS notifications for regulatory changes (e.g., EU anonymous transaction bans).
   - KYC/AML checklists for fund withdrawals.
-  - Solves: Regulatory uncertainty.
+Solves: Regulatory uncertainty.
 
 ### 5. Cycle Tracker (Market Cycle Analyzer)
 
@@ -83,7 +83,7 @@ Functionality:
   - Analysis of halvings, hash rate, and whale activity via blockchain data (no third-party servers).
   - Local graphics engine for price models (e.g., Stock-to-Flow forecasts).
   - Event calendar (e.g., BTC ETF application deadlines).
-  - Solves: Cycle forecasting and decision-making.
+Solves: Cycle forecasting and decision-making.
 
 ### Tech Stack
   - Language: Rust (security and performance).
