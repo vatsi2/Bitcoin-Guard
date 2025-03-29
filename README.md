@@ -1,4 +1,5 @@
 # 🛡️ Royen
+Bitcoin Security Software | Tax Optimization & Multisig Wallet | OTC Trading & Regulatory Compliance 
 ## 🔥 **Description**  
 **Royen Software** is a **secure, privacy-focused**, **offline-first software** designed for **Bitcoin investors, traders, and institutional clients** managing portfolios from **$50k to multi-million dollar balances**. This open-source, self-custody platform combines military-grade encryption with hybrid online/offline functionality, enabling users to trade, store, and analyze Bitcoin securely. Key features include multi-signature wallets, atomic swaps, CEX/DEX integration, tax optimization, and institutional-grade risk management. Built for regulatory compliance and sovereign wealth protection, ColdFortress is the ultimate tool for high-stakes Bitcoin management without compromising security.
 <p align="center"><img width="820" height="494" src="dashboard/ui.jpg" alt="Bot interface" /></p>
