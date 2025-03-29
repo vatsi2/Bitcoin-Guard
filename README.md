@@ -41,18 +41,6 @@ Bitcoin Security Software | Tax Optimization & Multisig Wallet | OTC Trading & R
 - **KYC/AML Checklist** for transactions >$10k.  
 - **Jurisdiction Analyzer** (compare tax rates across 50+ countries).  
 
-## 🛠️ Integrated DEX & CEX Platforms
-
-### Decentralized Exchanges (DEX)
-- THORChain: Cross-chain swaps (BTC → XMR, LTC, ETH).
-- Lightning Network: Instant, low-fee micropayments.
-- Bisq: P2P trading with fiat support.
-
-### Centralized Exchanges (CEX)
-- Binance: Spot/futures balance tracking.
-- Coinbase Pro: Tax report automation.
-- Kraken OTC: Bulk transaction imports.
-
 ## ⚙️ Customizable Settings(Just choose in GUI)
 
 ### 🔧 Security Module
