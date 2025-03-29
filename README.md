@@ -96,15 +96,15 @@ Goal: Import transactions, balances, and CoinJoin data.
 Settings:
 
 - Local File Sync:
- - Wasabi stores data in the WalletFiles folder. BitGuard Pro scans this directory (with user permission) and imports:
-  - Public addresses.
-  - CoinJoin transaction history.
-  - Balances (encrypted).
- - Data encryption: AES-256 with a key derived from the user’s master password.
+  - Wasabi stores data in the WalletFiles folder. BitGuard Pro scans this directory (with user permission) and imports:
+    - Public addresses.
+    - CoinJoin transaction history.
+    - Balances (encrypted).
+  - Data encryption: AES-256 with a key derived from the user’s master password.
 
 -  Advanced API Integration:
-  - Run Wasabi in the background with access to its RPC interface (port 37128).
-  - Example balance request:
+    - Run Wasabi in the background with access to its RPC interface (port 37128).
+    - Example balance request:
 ```
         curl --data '{"jsonrpc":"2.0","method":"getbalance"}' http://localhost:37128/
 ```
