@@ -2,7 +2,7 @@
 Bitcoin Security Software | Tax Optimization & Multisig Wallet | OTC Trading & Regulatory Compliance 
 ## 🔥 **Description**  
 **Royen** is a self-hosted Bitcoin management software for high-net-worth individuals (HNWI). Features multisig vaults, tax optimization (FIFO/LIFO/HIFO), OTC liquidity planning, hardware wallet integration (Ledger/Trezor), and regulatory compliance tools. Designed for BTC whales (>100k$) seeking privacy, security, and financial sovereignty.
-<p align="center"><img width="820" height="494" src="dashboard/ui.jpg" alt="Bot interface" /></p>
+<p align="center"><img width="820" height="494" src="board/screen.jpg" alt="Bot interface" /></p>
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
