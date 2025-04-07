@@ -39,6 +39,8 @@
 - Supports bridging assets across chains to capture cross-chain opportunities.
 - Automatically cancels or halts trades based on risk conditions.
 
+<p align="center"><img width="700" height="500" src="btc/asd.png" alt="Bot interface" /></p>
+
 ### 🌐 Leveraged Long/Short Trading
 - Opens margin or futures positions to go long or short on BTC. 
 - Configurable leverage levels per exchange or trading pair.
