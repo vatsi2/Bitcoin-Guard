@@ -1,7 +1,6 @@
 # 🛡️ Royen
 ## 🔥 **Description**  
 **Royen** Automates Bitcoin (BTC) trading strategies—specifically cross-chain arbitrage, TWAP (Time-Weighted Average Price), and leveraged long/short positions—while continuously managing risk through dynamic hedging. It runs locally on Windows, macOS, requiring only Python and minimal dependencies.
-<p align="center"><img width="900" height="600" src="board/1.jpg" alt="interface" /></p>
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
@@ -55,11 +54,6 @@
 ### 🔍 Scheduler Loop
 - Uses a simple scheduler (schedule library) to run strategies at defined intervals.
 - Continuous loop with configurable polling frequencies.
-
-<p align="center"><img width="1280" height="268" src="board/4.jpg" alt="interface" /></p>
-
-<p align="center"><img width="1280" height="266" src="board/5.jpg" alt="interface" /></p>
-
 
 ## ⚙️ Configurable Settings & Usage Guide(Just choose in GUI)
 ```
