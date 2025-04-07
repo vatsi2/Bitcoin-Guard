@@ -1,6 +1,6 @@
 # 🛡️ Royen
 ## 🔥 **Description**  
-**Royen** Automates Bitcoin (BTC) trading strategies—specifically cross-chain arbitrage, TWAP (Time-Weighted Average Price), and leveraged long/short positions—while continuously managing risk through dynamic hedging. It runs locally on Windows, macOS, requiring only Python and minimal dependencies.
+**Royen** is a powerful, portable Python suite for automated BTC Trading, Cross-Chain Arbitrage, TWAP Execution, and Leveraged Long/Short strategies, with built-in Risk Management and Alerts—all running locally, no AI required.
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
