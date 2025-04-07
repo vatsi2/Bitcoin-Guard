@@ -86,5 +86,3 @@ alerts:
   email: user@example.com   # Email for critical alerts
   webhook_url: null         # Webhook for notifications
 ```
-
-A: Consult a tax pro. BitGuard Pro supports 8 accounting standards.
