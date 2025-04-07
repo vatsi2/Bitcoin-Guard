@@ -12,8 +12,6 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
 [![Web3](https://img.shields.io/badge/Web3.py-6.0+-brightgreen)](https://web3py.readthedocs.io)
 
-> Dump $500K+ Tax-Free, Lock 8-Figure Bags Offline & Trade Like a Ghost.
-
 ## 🚀 **Key Features**  
 
 ### 🔒 Dynamic Risk Management
