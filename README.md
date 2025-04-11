@@ -17,6 +17,9 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
 [![Web3](https://img.shields.io/badge/Web3.py-6.0+-brightgreen)](https://web3py.readthedocs.io)
 
+## Supported Cold Wallets
+Wasabi, Electrum, TrustWallet, Exodus, Metamask, Ledger and other
+
 ## 🚀 **Key Features**  
 
 ### 🔒 Dynamic Risk Management
