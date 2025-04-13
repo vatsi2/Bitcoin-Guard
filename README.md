@@ -18,7 +18,7 @@
 [![Web3](https://img.shields.io/badge/Web3.py-6.0+-brightgreen)](https://web3py.readthedocs.io)
 
 ## Supported Cold Wallets
-Wasabi, Electrum, TrustWallet, Exodus, Metamask, Ledger and other
+Bitcoin Core, Wasabi, Electrum, TrustWallet, Exodus, Metamask, Ledger and other
 
 ## 🚀 **Key Features**  
 
