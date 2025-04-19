@@ -1,6 +1,6 @@
 # HodlDesk Royen Corp
 ## 🔥 **Description**  
-We propose “HodlDesk”, a cross-platform macOS/Windows desktop application tailored for high-net-worth Bitcoin holders (10 BTC+). It combines real-time multi-source portfolio aggregation, on-chain analytics, cold-storage key management, yield optimization across CeFi/DeFi, tax and compliance tooling, and institutional-grade OTC integration—all within a highly secure Electron-based framework. By addressing whale-specific pain points (fragmented data, security risks, manual yield strategies, and lack of compliance features), HodlDesk will meet an underserved demand and drive substantial downloads among sophisticated Bitcoin investors.
+We propose “HodlDesk”, a cross-platform macOS/Windows desktop application tailored for high-net-worth Bitcoin holders. It combines real-time multi-source portfolio aggregation, on-chain analytics, cold-storage key management, yield optimization across CeFi/DeFi, tax and compliance tooling, and institutional-grade OTC integration—all within a highly secure Electron-based framework. By addressing whale-specific pain points (fragmented data, security risks, manual yield strategies, and lack of compliance features), HodlDesk will meet an underserved demand and drive substantial downloads among sophisticated Bitcoin investors.
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
