@@ -21,33 +21,43 @@ We propose “HodlDesk”, a cross-platform macOS/Windows desktop application ta
 
 ## Key Features
 
-1. Unified Portfolio Dashboard
-    - Multi‑source Aggregation: Auto‑sync across 300+ wallets/exchanges (CoinStats‑style) plus custom API/import.
-    - On‑Chain KPIs: Glassnode‑powered metrics (SOPR, MVRV, whale supply trends) for timing buys/sells.
+1. Consolidated Portfolio Tracking
+    - Unified View: Aggregates balances, transactions, and performance metrics across multiple wallets and exchanges, providing a comprehensive overview of your holdings.
+    - Connectivity: Securely connects to exchanges and wallet addresses via encrypted API keys, ensuring real-time data synchronization.
 
 2. Secure Key & Cold‑Storage Manager
-    - SafeStorage Encryption: OS‑level key encryption via Electron’s safeStorage on macOS/Windows.
-    - Hardware & Cold Wallet Integration: Native Ledger, Trezor, Coldcard, Wasabi, Exodus, Electrum, Bticoin Core support with offline transaction signing (Exodus‑like UX).
+    - Cold-Storage Controls: Implements best practices for cold storage, including hardware wallets and air-gapped systems, to safeguard private keys offline.
+    - Air-Gap Workflows: Facilitates secure transaction signing through QR-code-based transfers between online and offline devices. Work on Wasabi, Trust, Exodus, Ledger, Bitcoin Core, Electrum and more
 
-3. Yield Optimizer
-    - DeFi & CeFi Opportunities: Track and deploy capital to top lending platforms, tokenized credit, and liquid restaking (Ether.Fi).
-    - Automated Strategies: Pre‑built “stacking” strategies with customizable risk parameters.
+3. On-Chain Intelligence
+    - Glassnode-Powered Metrics: Provides insights into whale behavior, exchange flows, and other on-chain indicators to inform trading decisions.
+    - Custom Alerts: Allows users to set threshold-based notifications for significant on-chain movements.
 
-4. Trading & OTC Module
-    - Algorithmic Execution: Limit, OCO, TWAP/VWAP orders across exchanges and OTC desk connections.
-    - Market‑Making Toolkit: Build “walls,” monitor order‑book depth, and simulate impact.
-    - Discrete OTC Integration: Secure P2P trading channels with audit logs (BitGo API).
+4. Yield Optimization
+    - Opportunity Explorer: Identifies high-yield opportunities across various platforms, including tokenized private credit products and DeFi strategies.
+    - Auto-Strategies: Offers pre-configured strategies like "stack," "borrow-to-farm," and rebalancing bots to automate yield generation.
 
-5. Tax, Reporting & Compliance
-    - Integrated Tax Engine: Real‑time P&L and audit reports exportable to major jurisdictions (ZenLedger integration).
-    - KYC/AML Vault: Secure storage of compliance documents with user‑managed permissioning.
+5. Advanced Trading & OTC
+    - Algorithmic Orders: Supports advanced order types such as TWAP/VWAP slicing, iceberg orders, and conditional triggers to minimize market impact.
+    - OTC Chat: Provides an encrypted peer-to-peer channel for discreet large-volume trades.
 
-## Technical Architecture
+6. Tax & Compliance Automation
+    - Integrated Tax Engine: Calculates real-time gains and losses across various trading activities, including spot, margin, futures, and DeFi.
+    - One-Click Export: Enables seamless export of tax reports compatible with platforms like ZenLedger, simplifying compliance.
+
+# Technical Architecture
 - Framework: Electron + React for cross‑platform desktop UI; Rust backend modules for high‑performance data processing and cryptography.
 
 - Security: Context isolation, CSP enforcement, no remote code execution, signed releases for macOS (Gatekeeper) and Windows (SmartScreen).
 
 - Data Layer: Encrypted SQLite for local data, optional enterprise server sync with zero‑knowledge encryption.
+
+## Smart Contracts Utilized
+HodlDesk integrates with various smart contracts to facilitate its operations:
+
+- DeFi Protocols: Interacts with lending and yield farming protocols to optimize returns.
+- Tokenized Assets: Engages with smart contracts representing tokenized private credit products.
+- Custom Contracts: Utilizes proprietary contracts for managing automated strategies and secure transaction execution.
 
 ## Transaction Mechanism
 - Order Placement: Executes trades through connected exchanges using encrypted API keys, ensuring secure and efficient order placement.
