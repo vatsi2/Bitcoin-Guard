@@ -1,6 +1,6 @@
 # HodlDesk Royen Corp
 ## **Description**  
-We propose “HodlDesk”, a cross-platform macOS/Windows desktop application tailored — providing a unified, secure, and professional‑grade environment to manage crypto portfolios. It consolidates multi‑wallet and multi‑exchange aggregation, cold‑storage key management, on‑chain analytics, yield optimization across CeFi/DeFi, advanced trading capabilities, and tax/compliance reporting into a single interface. HodlDesk enables streamlined workflow, enhanced security, and data‑driven decision‑making and institutional-grade OTC integration—all within a highly secure Electron-based framework.
+“HodlDesk”, a cross-platform macOS/Windows desktop application tailored — providing a unified, secure, and professional‑grade environment to manage crypto portfolios. It consolidates multi‑wallet and multi‑exchange aggregation, cold‑storage key management, on‑chain analytics, yield optimization across CeFi/DeFi, advanced trading capabilities, and tax/compliance reporting into a single interface. HodlDesk enables streamlined workflow, enhanced security, and data‑driven decision‑making and institutional-grade OTC integration—all within a highly secure Electron-based framework.
 
 [![Audited by OpenZeppelin](https://img.shields.io/badge/Audit-OpenZeppelin-green)](https://openzeppelin.com)
 [![MPC Wallet Support](https://img.shields.io/badge/Security-Fireblocks%20MPC-blue)](https://)
