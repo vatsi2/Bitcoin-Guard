@@ -109,3 +109,28 @@ Trading & OTC Desk
 Tax & Compliance
 - Integrated Tax Engine: Real‑time gain/loss calculations across spot, margin, futures, and DeFi.
 - One‑Click Export: CSV, TurboTax, or direct ZenLedger e‑file integration.
+
+## HodlDedsk Trading 
+HodlDesk incorporates a suite of advanced trading strategies—both traditional algorithmic orders and DeFi‑style auto‑strategies—to help users minimize market impact, optimize execution, and automate portfolio management. Core strategies include TWAP and VWAP slicing for minimized slippage, Iceberg Orders and Conditional Orders (stop‑loss, take‑profit, trailing stops) for precision execution, plus Stack (Staking), Borrow‑to‑Farm (Leveraged Yield Farming), and Rebalancing Bots for automated yield generation and allocation management:
+
+- Time‑Weighted Average Price (TWAP)
+TWAP algorithms slice large orders into evenly spaced trades over a defined time window, aiming to achieve an average execution price that mirrors the time‑weighted market price and reduce market impact. Institutions often use TWAP to execute substantial trades without causing abrupt price moves, breaking a large volume into uniform chunks throughout the trading period 
+
+
+- Volume‑Weighted Average Price (VWAP)
+VWAP strategies execute trades proportional to the market’s volume profile, targeting an average execution price that reflects both price and traded volume within a session, thereby minimizing execution cost relative to intraday liquidity. VWAP is especially valuable for high‑liquidity assets, guiding large orders to blend seamlessly with prevailing market flows.
+
+- Iceberg Orders
+Iceberg Orders conceal the total order size by only displaying small “tip” orders on the book; as each tip fills, a new child order is released until the full quantity is executed. This masking technique prevents large orders from moving the market and deters predatory front‑running.
+
+- Conditional Orders
+HodlDesk supports a full suite of conditional and contingent orders—Stop‑Loss, Stop‑Limit, Take‑Profit, Trailing Stops, One‑Cancels‑the‑Other (OCO)—enabling automated exits, entry triggers, and risk management based on price thresholds or market conditions.
+
+- Stack (Staking)
+Beyond trading, HodlDesk’s “Stack” strategy leverages Proof‑of‑Stake networks by locking assets to earn network rewards. Users can configure staking parameters (lock‑up period, validator selection) to maximize passive yield while maintaining portfolio visibility .
+
+- Borrow‑to‑Farm (Leveraged Yield Farming)
+HodlDesk’s Borrow‑to‑Farm feature automates leveraged yield farming by borrowing on CeFi/DeFi platforms (e.g., Aave, Compound) and deploying collateral into high‑APY pools. This leverages capital efficiency to amplify returns, with built‑in risk controls and margin monitoring.
+
+- Rebalancing Bots
+Automated Rebalancing Bots monitor asset weights and execute periodic or threshold‑based trades to maintain target allocations. HodlDesk integrates dynamic rebalancing akin to KuCoin’s Smart Rebalance and Shrimpy’s portfolio engine, adjusting holdings automatically to capture gains and mitigate drawdowns .
